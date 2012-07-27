@@ -11,7 +11,6 @@ urlpatterns = patterns('',
 	url(r'^$', 'articles.views.index'),
 	url(r'^articles/(?P<article_id>\d+)/$', 'articles.views.detail'),
 	
-    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 )
 
 urlpatterns += staticfiles_urlpatterns()

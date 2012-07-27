@@ -104,7 +104,7 @@ ROOT_URLCONF = 'Record.urls'
 WSGI_APPLICATION = 'Record.wsgi.application'
 
 TEMPLATE_DIRS = (
-	"/var/www/record.jeffbarg.com/templates",
+	"Users/jeffbarg/Fructose Tech/Horace-Mann-Record/static/admin/",
 
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
@@ -121,7 +121,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
-    'django.contrib.admindocs',
+    # 'django.contrib.admindocs',
 	'articles',
 	'printissues',
 )
