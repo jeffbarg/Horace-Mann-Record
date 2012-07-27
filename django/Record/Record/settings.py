@@ -104,7 +104,7 @@ ROOT_URLCONF = 'Record.urls'
 WSGI_APPLICATION = 'Record.wsgi.application'
 
 TEMPLATE_DIRS = (
-	"Users/jeffbarg/Fructose Tech/Horace-Mann-Record/static/admin/",
+	"/Users/jeffbarg/Fructose Tech/Horace-Mann-Record/templates/",
 
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.

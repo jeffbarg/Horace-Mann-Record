@@ -1,5 +1,5 @@
 # Create your views here.
-from django.template import Context, loader
+from django.template import RequestContext, loader
 from articles.models import Article
 from django.http import HttpResponse
 from django.shortcuts import render_to_response, get_object_or_404
@@ -14,5 +14,11 @@ def index(request):
     return HttpResponse(t.render(c))
   
 def detail(request, article_id):
-	p = get_object_or_404(Article, pk=article_id)
-	return HttpResponse("You're looking at article %s." % p.text)
+	article = get_object_or_404(Article, pk=article_id)
+	# authors = article.authors.all
+	
+	t = loader.get_template('articles/index.html')
+	c = RequestContext(request, {
+		'article': article,
+		})
+	return HttpResponse(t.render(c))

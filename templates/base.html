@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>{% block title %}Horace Mann Record{% endblock %}</title>
+	<meta name="author" content="Jeff Barg">
+	<meta name="description" content="Online Home of the Horace Mann Record">
+	<meta name="created" content="July 27th, 2012">
+
+	<link rel="stylesheet" href="{{STATIC_URL}}css/base_styles.css" type="text/css" />
+	<link rel="shortcut icon" href="{{STATIC_URL}}images/favicon.ico" />
+
+	{% block head %}{% endblock %}
+
+</head>
+
+
+<body>
+<div id = "container">	
+	<div id = "header">
+		<a href = "/">
+			<div id = "date">
+				Thursday<br />July 12, 2012
+			</div>
+			<div id = "downloadLatest">
+				<a href = "http://jeffbarg.com">Download<br />the Latest Issue</a>
+			</div>
+			<a href = "/">
+			<div id="logo">
+
+			</div>
+			</a>
+		</a>
+	
+		<div id = "contentNav">
+			<ul>
+				<li><a href="#home">News</a></li>
+				<li><a href="#home">Opinions &amp; Editorials</a></li>
+				<li><a href="#home">Arts &amp; Entertainment</a></li>
+				<li><a href="#home">Features</a></li>
+				<li><a href="#home">Middle Division</a></li>
+				<li><a href="#home">Lion&apos;s Den</a></li>
+				<li><a href="#home">Multimedia</a></li>
+				<li>
+					<div id="searchwrapper">
+						<form action="">
+							<input type="text" class="searchbox" name="s" value="" />
+							<input type="image" src="{{STATIC_URL}}img/searchicon.png" class="searchbox_submit" value="" />
+						</form>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id = "content">
+		{% block content %}{% endblock %}
+	</div>
+
+
+
+</div>
+</div>
+
+<div id = "footer">
+	Copyright <div id = "fructosetech"><a href = "http://fructosetech.com">&copy;</a></div> <a href = "http://horacemann.org">Horace Mann School</a> 2012
+</div>
+</body>
