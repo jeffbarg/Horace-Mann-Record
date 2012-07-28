@@ -2,7 +2,7 @@
 {% block title %}{{article.title}}{% endblock title %}
 
 {% block head %}
-		<link rel="stylesheet" href="{{STATIC_URL}}css/article_index.css" type="text/css" />
+		<link rel="stylesheet" href="{{STATIC_URL}}css/article_detail.css" type="text/css" />
 {% endblock head %}
 
 {% block content %}
@@ -14,7 +14,7 @@
 		</div>
 	</div>
 	</div>
-	
+
 	<div id = "sidebar">
 		<p><div id = "authorimage" style = "background-image:url('{{STATIC_URL}}img/moon.jpeg')"></div></p>
 		<p>Written by <b>{{ article.authors.all|join:', ' }}</b>
