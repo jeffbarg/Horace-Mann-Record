@@ -6,12 +6,15 @@
 {% endblock head %}
 
 {% block content %}
-				<div id = "column1">
+	<div id = "column1wrapper">
+	<div id = "column1">
 		<div id = "article">
 			<h1>{{article.title}}</h1>
 			{{article.text|safe|escape}}
 		</div>
 	</div>
+	</div>
+	
 	<div id = "sidebar">
 		<p><div id = "authorimage" style = "background-image:url('{{STATIC_URL}}img/moon.jpeg')"></div></p>
 		<p>Written by <b>{{ article.authors.all|join:', ' }}</b>

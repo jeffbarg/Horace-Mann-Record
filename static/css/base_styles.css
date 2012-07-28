@@ -5,11 +5,14 @@ body {
 	background-image:-webkit-linear-gradient(rgb(190,0,0) 0%, rgba(120,0,0,0) 100%);
 	background-repeat: no-repeat;	
 	background-color: rgb(100,0,0);
-	background-size: 100% 240px;
-	
+	background-size: 1px 240px;
+	background-repeat: repeat-x;
+
 	color: inherit;
 
-	width: 960px;
+	min-width: 960px;
+	max-width:1260px;
+
 	height: auto;
 	
 	font-family:Georgia,"Times New Roman",Serif;
@@ -30,7 +33,7 @@ body {
 
 	
 	background-image: url('/static/img/wrinkly.png');
-	background-repeat: no-repeat;
+	background-repeat: repeat-x;
 	
 	overflow: hidden;
 }
@@ -47,7 +50,9 @@ a:visited {
 #header {
 	height:180px;
 	float: left;
-	width:960px;
+	min-width: 960px;
+	max-width:1260px;
+	width:100%;
 }
 
 #logo {

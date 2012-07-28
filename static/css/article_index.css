@@ -1,7 +1,15 @@
+#column1wrapper {
+	margin-left: -300px;
+	width:100%;
+}
 #column1 {
 	float:left;
-	width:600px;	
+
+	margin-left: 300px;
+	position: relative;
+
 }
+
 
 #article {
 	font-size: 12pt;
@@ -18,6 +26,10 @@
 	padding-top:5px;
 	width: 260px;
 	float:right;
+
+	position: relative;
+
+	clear:none;
 }
 
 #sidebar h2 {
