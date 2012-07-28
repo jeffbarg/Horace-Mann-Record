@@ -1,12 +1,16 @@
 from django.db import models
 from django.contrib.auth.models import User
+import datetime
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
+from django.template.defaultfilters import slugify
 
 # Create your models here.
 class Author(User):
 	profile_picture   = models.ImageField(upload_to='authors/pictures/', blank = True)
 	bio 			  = models.TextField('Author Bio', help_text = 'Enter a short bio.', blank = True)
 	
-	def __str__(self):
+	def __unicode__(self):
 		return self.first_name + " " + self.last_name
 
 class Article(models.Model):
@@ -24,6 +28,8 @@ class Article(models.Model):
 	text 			 = models.TextField('Article Text', help_text = 'Copy and paste Article Text into here, then edit using built-in editor as needed.')
 	authors		 	 = models.ManyToManyField(Author)
 
+	slug 			 = models.SlugField('Slug', blank = True)
+
 	category 	 	 = models.CharField('Category', max_length=20, choices = CATEGORY_CHOICES)
 
 	is_featured		 = models.BooleanField('Featured' , help_text = 'Is this article in a featured section?')
@@ -40,3 +46,10 @@ class Article(models.Model):
 
 	def __unicode__(self):
 		return self.title
+	
+	def save(self):
+		if not self.id:
+			self.slug = slugify(self.title)
+			self.date_published = datetime.datetime.today()
+		self.last_updated = datetime.datetime.today()
+		super(Article, self).save()

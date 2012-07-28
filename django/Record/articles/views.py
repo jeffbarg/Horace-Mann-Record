@@ -13,11 +13,11 @@ def index(request):
     })
     return HttpResponse(t.render(c))
   
-def detail(request, article_id):
-	article = get_object_or_404(Article, pk=article_id)
+def detail(request, article_slug):
+	article = get_object_or_404(Article, slug = article_slug)
 	# authors = article.authors.all
 	
-	t = loader.get_template('articles/index.html')
+	t = loader.get_template('articles/detail.html')
 	c = RequestContext(request, {
 		'article': article,
 		})
