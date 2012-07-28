@@ -104,6 +104,7 @@ ROOT_URLCONF = 'Record.urls'
 WSGI_APPLICATION = 'Record.wsgi.application'
 
 TEMPLATE_DIRS = (
+	"/var/www/horacemannrecord.com/templates/"
 	"/Users/jeffbarg/Fructose Tech/Horace-Mann-Record/templates/",
 
 	# Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
