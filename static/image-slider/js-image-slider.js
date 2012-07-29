@@ -1,7 +1,7 @@
 var sliderOptions=
 {
 	sliderId: "slider",
-	effect: "9",
+	effect: "13",
 	effectRandom: false,
 	pauseTime: 2600,
 	transitionTime: 600,
@@ -12,7 +12,6 @@ var sliderOptions=
 	captionOpacity: 0.3,
 	captionEffect: "fade",
 	thumbnailsWrapperId: "thumbs",
-	license: "free"
 };
 
 var imageSlider=new mcImgSlider(sliderOptions);
