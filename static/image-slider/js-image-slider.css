@@ -100,4 +100,16 @@ div.navBulletsWrapper div.active {background-position:0 -11px;}
 
     background-position: center top; 
     background-size: auto;
+
+    /* Firefox */
+
+-moz-background-size: cover;
+
+/* WebKit */
+
+-webkit-background-size: cover;
+
+/* Opera 9.5+, later Google Chrome */
+
+background-size: cover;
 }
