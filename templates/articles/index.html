@@ -3,6 +3,10 @@
 
 {% block head %}
 		<link rel="stylesheet" href="{{STATIC_URL}}css/article_index.css" type="text/css" />
+
+	    <link href="{{STATIC_URL}}image-slider/js-image-slider.css" rel="stylesheet" type="text/css" />
+	    <script src="{{STATIC_URL}}image-slider/js-image-slider.js" type="text/javascript"></script>
+
 {% endblock head %}
 
 {% block content %}
@@ -80,6 +84,24 @@
 		</div>
 
 		<div id = "middlecolumn">
+			
+			<div id="sliderFrame">
+		        <div id="ribbon"></div>
+		        <div id="slider">
+		            <img src="{{STATIC_URL}}images/image-slider-1.jpg" alt="Welcome to Menucool Image Slider" />
+		            <img src="{{STATIC_URL}}images/image-slider-2.jpg" alt="" />
+		            <img src="{{STATIC_URL}}images/image-slider-3.jpg" alt="Pure Javascript. No jQuery. No flash." />
+		            <img src="{{STATIC_URL}}images/image-slider-4.jpg" alt="#htmlcaption" />
+		            <a href="http://www.menucool.com/vertical/accordion-menu" target="_blank">
+		                <img src="images/image-slider-5.jpg" />
+		            </a>
+		        </div>
+		        <div id="htmlcaption" style="display: none;">
+		            <em>HTML</em> caption. Link to <a href="http://www.google.com/">Google</a>.
+		        </div>
+		    </div>
+
+
 
 			<div class = "section">
 				<a href = "/sections/news/"><h1>News</h1></a>
