@@ -6,12 +6,25 @@ from django.shortcuts import render_to_response, get_object_or_404
 
 
 def index(request):
-    latest_article_list = Article.objects.all().order_by('-date_published')[:5]
-    t = loader.get_template('articles/index.html')
-    c = RequestContext(request, {
-        'latest_article_list': latest_article_list,
+	articleobjects = Article.objects.all()
+
+	oped_articles = articleobjects.filter(category = "OE").order_by('-date_published')[:3]
+	arts_articles = articleobjects.filter(category = "AE").order_by('-date_published')[:3]
+	lionsden_articles = articleobjects.filter(category = "LD").order_by('-date_published')[:3]
+	middledivision_articles = articleobjects.filter(category = "MD").order_by('-date_published')[:3]
+	news_articles = articleobjects.filter(category = "NW").order_by('-date_published')[:3]
+	features_articles = articleobjects.filter(category = "FT").order_by('-date_published')[:3]
+
+	t = loader.get_template('articles/index.html')
+	c = RequestContext(request, {
+        'oped_articles': oped_articles,
+        'arts_articles': arts_articles,
+        'news_articles': news_articles,
+        'features_articles':features_articles,
+        'lionsden_articles':lionsden_articles,
+        'middledivision_articles':middledivision_articles,
     })
-    return HttpResponse(t.render(c))
+	return HttpResponse(t.render(c))
   
 def detail(request, article_slug):
 	article = get_object_or_404(Article, slug = article_slug)

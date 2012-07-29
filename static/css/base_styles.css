@@ -41,7 +41,17 @@ body {
 a {
 	text-decoration: none;
 	color: inherit;
+	
+	-webkit-transition: text-shadow .2s ease;
+	-moz-transition:  text-shadow .2s ease;
 }
+a:hover {
+	text-shadow:0px 0px 3px rgb(180,0,0);
+
+	-webkit-transition: text-shadow .2s ease;
+	-moz-transition:  text-shadow .2s ease;
+}
+
 a:visited {
 	text-decoration: none;
 	color:inherit;

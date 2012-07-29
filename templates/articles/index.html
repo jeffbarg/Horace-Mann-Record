@@ -7,109 +7,30 @@
 
 {% block content %}
 		<div id = "leftcolumn">
-
 			<div class = "section">
 				<a href = "/sections/lionsden/"><h1>Lion's Den Highlights</h1></a>
-
-				<div class = "article">
-					<a href = "/articles/slug"><h2>Some Really Intense Article Title</h2></a>
-					<div class = "articlemetadata">
-						<div class = "authors">BY JAY MOON, JEFF BARG</div> 
-						<div class = "date_published">JULY 27TH, 2012</div>
+				{% for article in oped_articles %}
+					<div class = "article">
+						<a href = "/articles/{{article.slug}}"><h2>Some Really Intense Article Title</h2></a>
+						<div class = "articlemetadata">
+							<div class = "{{article.authors.all }}">BY JAY MOON, JEFF BARG</div> 
+							<div class = "date_published">JULY 27TH, 2012</div>
+						</div>
+						<div class = "articlecontent">
+							{{article.text|safe|escape|truncatewords:"50"}}
+						</div>
 					</div>
-					<div class = "articlecontent">
-						Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-					</div>
-				</div>
-				<div class = "article">
-					<a href = "/articles/slug"><h2>Some Really Intense Article Title</h2></a>
-					<div class = "articlemetadata">
-						<div class = "authors">BY JAY MOON, JEFF BARG</div> 
-						<div class = "date_published">JULY 27TH, 2012</div>
-					</div>
-					<div class = "articlecontent">
-						Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-					</div>
-				</div>
+				{% endfor %}
 			</div>
 			
-			<div class = "section">
-				<a href = "/sections/lionsden/"><h1>Lion's Den Highlights</h1></a>
 
-				<div class = "article">
-					<a href = "/articles/slug"><h2>Some Really Intense Article Title</h2></a>
-					<div class = "articlemetadata">
-						<div class = "authors">BY JAY MOON, JEFF BARG</div> 
-						<div class = "date_published">JULY 27TH, 2012</div>
-					</div>
-					<div class = "articlecontent">
-						Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-					</div>
-				</div>
-				<div class = "article">
-					<a href = "/articles/slug"><h2>Some Really Intense Article Title</h2></a>
-					<div class = "articlemetadata">
-						<div class = "authors">BY JAY MOON, JEFF BARG</div> 
-						<div class = "date_published">JULY 27TH, 2012</div>
-					</div>
-					<div class = "articlecontent">
-						Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-					</div>
-				</div>
-			</div>
 		</div>
 
 		<div id = "rightcolumn">
-						<div class = "section">
-				<a href = "/sections/lionsden/"><h1>Lion's Den Highlights</h1></a>
 
-				<div class = "article">
-					<a href = "/articles/slug"><h2>Some Really Intense Article Title</h2></a>
-					<div class = "articlemetadata">
-						<div class = "authors">BY JAY MOON, JEFF BARG</div> 
-						<div class = "date_published">JULY 27TH, 2012</div>
-					</div>
-					<div class = "articlecontent">
-						Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-					</div>
-				</div>
-				<div class = "article">
-					<a href = "/articles/slug"><h2>Some Really Intense Article Title</h2></a>
-					<div class = "articlemetadata">
-						<div class = "authors">BY JAY MOON, JEFF BARG</div> 
-						<div class = "date_published">JULY 27TH, 2012</div>
-					</div>
-					<div class = "articlecontent">
-						Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-					</div>
-				</div>
-			</div>
 		</div>
 
 		<div id = "middlecolumn">
-		    	<div class = "section">
-		    	<a href = "/sections/lionsden/"><h1>News</h1></a>
 
-				<div class = "article">
-					<a href = "/articles/slug"><h2>Some Really Intense Article Title</h2></a>
-					<div class = "articlemetadata">
-						<div class = "authors">BY JAY MOON, JEFF BARG</div> 
-						<div class = "date_published">JULY 27TH, 2012</div>
-					</div>
-					<div class = "articlecontent">
-						Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-					</div>
-				</div>
-				<div class = "article">
-					<a href = "/articles/slug"><h2>Some Really Intense Article Title</h2></a>
-					<div class = "articlemetadata">
-						<div class = "authors">BY JAY MOON, JEFF BARG</div> 
-						<div class = "date_published">JULY 27TH, 2012</div>
-					</div>
-					<div class = "articlecontent">
-						Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-					</div>
-				</div>
-			</div>
 		</div>
 {% endblock content %}

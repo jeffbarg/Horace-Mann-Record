@@ -17,9 +17,7 @@ class Article(models.Model):
 	CATEGORY_CHOICES = (
 		('OE', 'Opinions and Editorials'),
 		('AE', 'Arts and Entertainment'),
-		('AF', 'Autofocus'),
 		('FT', 'Features'),
-		('FH', 'Features Home Page'),
 		('LD', "Lion's Den"),
 		('MD', 'Middle Division'),
 		('NW', 'News'),
