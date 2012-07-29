@@ -11,9 +11,9 @@
 				<a href = "/sections/lionsden/"><h1>Lion's Den Highlights</h1></a>
 				{% for article in oped_articles %}
 					<div class = "article">
-						<a href = "/articles/{{article.slug}}"><h2>Some Really Intense Article Title</h2></a>
+						<a href = "/articles/{{article.slug}}"><h2>{{article.title}}</h2></a>
 						<div class = "articlemetadata">
-							<div class = "{{article.authors.all }}">BY JAY MOON, JEFF BARG</div> 
+							<div class = "authors">BY {{article.authors.all |join:', '|upper}}</div> 
 							<div class = "date_published">JULY 27TH, 2012</div>
 						</div>
 						<div class = "articlecontent">

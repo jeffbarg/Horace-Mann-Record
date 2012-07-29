@@ -1,6 +1,9 @@
 #content {
 	clear:both;
-	padding: 25px;
+	padding-top:25px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 25px;
 }
 
 
@@ -30,13 +33,15 @@
 }
 
 .section {
-	padding: 15px 0px;
+	padding: 0px 0px;
 	border-bottom: 1px dashed black;
 }
 
 .section h1 {
 	font-size: 16pt;
 	margin: 0px;
+	height: 28px;
+	border-bottom: 1px dashed;
 }
 
 .section h1:after {
@@ -45,7 +50,6 @@
 
 .article {
 }
-
 .article h2 {
 	font-size: 12pt;
 	text-align: left;
@@ -58,17 +62,19 @@
 	font-size: 8pt;
 	font-family: "serif";
 	font-weight: 600;
-	height: 25px;
+	padding-bottom: 8px;
 }
 .authors {
 	float:left;
-
+	clear:none;
+	position: relative;
 }
 
 .date_published {
-
 	float:right;
-	font-size: 8pt;
+
+	clear:none;
+	position: relative;
 
 }
 

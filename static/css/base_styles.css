@@ -10,8 +10,8 @@ body {
 
 	color: inherit;
 
-	min-width: 980px !important;
-	max-width: 85%;
+	min-width: 990px !important;
+	max-width: 1200px;
 
 	height: auto;
 	
@@ -22,7 +22,7 @@ body {
 	position: relative;
 	background-color: white;
 	
-	margin: auto 8px;
+	margin: auto 15px;
 	padding:0px;
 	
 	height: auto;
