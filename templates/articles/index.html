@@ -9,7 +9,7 @@
 		<div id = "leftcolumn">
 			<div class = "section">
 				<a href = "/sections/opeds/"><h1>Opinions &amp; Editorials</h1></a>
-				{% for article in arts_articles %}
+				{% for article in oped_articles %}
 					<div class = "article">
 						<a href = "{{article.get_absolute_url}}"><h2>{{article.title}}</h2></a>
 						<div class = "articlemetadata">
@@ -26,7 +26,7 @@
 			
 			<div class = "section">
 				<a href = "/sections/arts/"><h1>Arts &amp; Entertainment</h1></a>
-				{% for article in oped_articles %}
+				{% for article in arts_articles %}
 					<div class = "article">
 						<a href = "{{article.get_absolute_url}}"><h2>{{article.title}}</h2></a>
 						<div class = "articlemetadata">
