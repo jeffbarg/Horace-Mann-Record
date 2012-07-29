@@ -89,7 +89,9 @@
 		        <div id="ribbon"></div>
 		        <div id="slider">
 		        	{% for article in image_articles %}
+		        		<a href = "/articles/{{article.slug}}">
 		        		<img src="{{article.featured_image.url}}" alt="{{article.title}}" />
+			        	</a>
 		        	{% endfor %}
 
 
