@@ -1,10 +1,16 @@
 {% extends "admin/base.html" %}
 {% load i18n %}
 
+{% block extrastyle %}
+{{block.super}}
+<link rel="shortcut icon" href="/static/img/favicon.ico" />
+{% endblock %}
+
 {% block title %}{{ title }} | {% trans 'site admin' %}{% endblock %}
 
 {% block branding %}
 <h1 id="site-name">{% trans 'Horace Mann Record' %}</h1>
+
 {% endblock %}
 
 {% block nav-global %}{% endblock %}

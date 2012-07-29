@@ -11,14 +11,14 @@
 				<a href = "/sections/opeds/"><h1>Opinions &amp; Editorials</h1></a>
 				{% for article in oped_articles %}
 					<div class = "article">
-						<a href = "{{article.get_absolute_url}}"><h2>{{article.title}}</h2></a>
+						<a href = "/articles/{{article.slug}}"><h2>{{article.title}}</h2></a>
 						<div class = "articlemetadata">
 							<div class = "authors">BY {{article.authors.all|join:', '|upper}}</div> 
 							<div class = "date_published">JULY 27TH, 2012</div>
 						</div>
 						<div class = "articlecontent">
 							{{article.text|safe|escape|truncatewords:"60"}}
-							<b><a href = "{{article.get_absolute_url}}">Continue Reading</a></b>
+							<b><a href = "/articles/{{article.slug}}">Continue Reading</a></b>
 						</div>
 					</div>
 				{% endfor %}
@@ -28,14 +28,14 @@
 				<a href = "/sections/arts/"><h1>Arts &amp; Entertainment</h1></a>
 				{% for article in arts_articles %}
 					<div class = "article">
-						<a href = "{{article.get_absolute_url}}"><h2>{{article.title}}</h2></a>
+						<a href = "/articles/{{article.slug}}"><h2>{{article.title}}</h2></a>
 						<div class = "articlemetadata">
 							<div class = "authors">BY {{article.authors.all|join:', '|upper}}</div> 
 							<div class = "date_published">JULY 27TH, 2012</div>
 						</div>
 						<div class = "articlecontent">
 							{{article.text|safe|escape|truncatewords:"60"}}
-							<b><a href = "{{article.get_absolute_url}}">Continue Reading</a></b>
+							<b><a href = "/articles/{{article.slug}}">Continue Reading</a></b>
 						</div>
 					</div>
 				{% endfor %}
@@ -48,14 +48,14 @@
 				<a href = "/sections/lionsden/"><h1>Lion&apos;s Den</h1></a>
 				{% for article in lionsden_articles %}
 					<div class = "article">
-						<a href = "{{article.get_absolute_url}}"><h2>{{article.title}}</h2></a>
+						<a href = "/articles/{{article.slug}}"><h2>{{article.title}}</h2></a>
 						<div class = "articlemetadata">
 							<div class = "authors">BY {{article.authors.all|join:', '|upper}}</div> 
 							<div class = "date_published">JULY 27TH, 2012</div>
 						</div>
 						<div class = "articlecontent">
 							{{article.text|safe|escape|truncatewords:"60"}}
-							<b><a href = "{{article.get_absolute_url}}">Continue Reading</a></b>
+							<b><a href = "/articles/{{article.slug}}">Continue Reading</a></b>
 						</div>
 					</div>
 				{% endfor %}
@@ -65,14 +65,14 @@
 				<a href = "/sections/middledivision/"><h1>Middle Division</h1></a>
 				{% for article in middledivision_articles %}
 					<div class = "article">
-						<a href = "{{article.get_absolute_url}}"><h2>{{article.title}}</h2></a>
+						<a href = "/articles/{{article.slug}}"><h2>{{article.title}}</h2></a>
 						<div class = "articlemetadata">
 							<div class = "authors">BY {{article.authors.all|join:', '|upper}}</div> 
 							<div class = "date_published">JULY 27TH, 2012</div>
 						</div>
 						<div class = "articlecontent">
 							{{article.text|safe|escape|truncatewords:"60"}}
-							<b><a href = "{{article.get_absolute_url}}">Continue Reading</a></b>
+							<b><a href = "/articles/{{article.slug}}">Continue Reading</a></b>
 						</div>
 					</div>
 				{% endfor %}
@@ -85,14 +85,14 @@
 				<a href = "/sections/news/"><h1>News</h1></a>
 				{% for article in news_articles %}
 					<div class = "article">
-						<a href = "{{article.get_absolute_url}}"><h2>{{article.title}}</h2></a>
+						<a href = "/articles/{{article.slug}}"><h2>{{article.title}}</h2></a>
 						<div class = "articlemetadata">
 							<div class = "authors">BY {{article.authors.all|join:', '|upper}}</div> 
 							<div class = "date_published">JULY 27TH, 2012</div>
 						</div>
 						<div class = "articlecontent">
 							{{article.text|safe|escape|truncatewords:"60"}}
-							<b><a href = "{{article.get_absolute_url}}">Continue Reading</a></b>
+							<b><a href = "/articles/{{article.slug}}">Continue Reading</a></b>
 						</div>
 					</div>
 				{% endfor %}
@@ -102,14 +102,14 @@
 				<a href = "/sections/features/"><h1>Features</h1></a>
 				{% for article in features_articles %}
 					<div class = "article">
-						<a href = "{{article.get_absolute_url}}"><h2>{{article.title}}</h2></a>
+						<a href = "/articles/{{article.slug}}"><h2>{{article.title}}</h2></a>
 						<div class = "articlemetadata">
 							<div class = "authors">BY {{article.authors.all|join:', '|upper}}</div> 
 							<div class = "date_published">JULY 27TH, 2012</div>
 						</div>
 						<div class = "articlecontent">
 							{{article.text|safe|escape|truncatewords:"60"}}
-							<b><a href = "{{article.get_absolute_url}}">Continue Reading</a></b>
+							<b><a href = "/articles/{{article.slug}}">Continue Reading</a></b>
 						</div>
 					</div>
 				{% endfor %}
