@@ -76,12 +76,13 @@
 .authors {
 	float:left;
 	clear:none;
+	width: 60%;
 	position: relative;
 }
 
 .date_published {
 	float:right;
-
+	width: 35%;
 	clear:none;
 	position: relative;
 
