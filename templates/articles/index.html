@@ -88,13 +88,11 @@
 			<div id="sliderFrame">
 		        <div id="ribbon"></div>
 		        <div id="slider">
-		            <img src="{{STATIC_URL}}images/image-slider-1.jpg" alt="Welcome to Menucool Image Slider" />
-		            <img src="{{STATIC_URL}}images/image-slider-2.jpg" alt="" />
-		            <img src="{{STATIC_URL}}images/image-slider-3.jpg" alt="Pure Javascript. No jQuery. No flash." />
-		            <img src="{{STATIC_URL}}images/image-slider-4.jpg" alt="#htmlcaption" />
-		            <a href="http://www.menucool.com/vertical/accordion-menu" target="_blank">
-		                <img src="images/image-slider-5.jpg" />
-		            </a>
+		        	{% for article in image_articles %}
+		        		<img src="{{article.profile_picture.url}}" alt="{{article.title}}" />
+		        	{% endfor %}
+
+
 		        </div>
 		        <div id="htmlcaption" style="display: none;">
 		            <em>HTML</em> caption. Link to <a href="http://www.google.com/">Google</a>.

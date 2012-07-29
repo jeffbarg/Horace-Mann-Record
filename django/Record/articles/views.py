@@ -1,12 +1,13 @@
 # Create your views here.
 from django.template import RequestContext, loader
 from articles.models import Article
+from articles.models import Author
 from django.http import HttpResponse
 from django.shortcuts import render_to_response, get_object_or_404
 
 
 def index(request):
-	articleobjects = Article.objects.all()
+	articleobjects = Article.objects
 
 	oped_articles = articleobjects.filter(category = "OE").order_by('-date_published')[:2]
 	arts_articles = articleobjects.filter(category = "AE").order_by('-date_published')[:2]
@@ -14,6 +15,8 @@ def index(request):
 	middledivision_articles = articleobjects.filter(category = "MD").order_by('-date_published')[:2]
 	news_articles = articleobjects.filter(category = "NW").order_by('-date_published')[:2]
 	features_articles = articleobjects.filter(category = "FT").order_by('-date_published')[:2]
+
+	image_articles = articleobjects.filter(authors__profile_picture__isnull=False)[:5]
 
 	t = loader.get_template('articles/index.html')
 	c = RequestContext(request, {
@@ -23,6 +26,7 @@ def index(request):
         'features_articles':features_articles,
         'lionsden_articles':lionsden_articles,
         'middledivision_articles':middledivision_articles,
+        'image_articles':image_articles,
     })
 	return HttpResponse(t.render(c))
   
