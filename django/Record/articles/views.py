@@ -16,7 +16,7 @@ def index(request):
 	news_articles = articleobjects.filter(category = "NW").order_by('-date_published')[:2]
 	features_articles = articleobjects.filter(category = "FT").order_by('-date_published')[:2]
 
-	image_articles = articleobjects.filter(authors__profile_picture__isnull=False)[:5]
+	image_articles = articleobjects.filter(featured_image__isnull=False)[:5]
 
 	t = loader.get_template('articles/index.html')
 	c = RequestContext(request, {
