@@ -10,8 +10,8 @@ body {
 
 	color: inherit;
 
-	min-width: 960px;
-	max-width:1260px;
+	min-width: 980px !important;
+	max-width: 85%;
 
 	height: auto;
 	
@@ -22,7 +22,7 @@ body {
 	position: relative;
 	background-color: white;
 	
-	margin: auto;
+	margin: auto 8px;
 	padding:0px;
 	
 	height: auto;
@@ -46,7 +46,7 @@ a {
 	-moz-transition:  text-shadow .2s ease;
 }
 a:hover {
-	text-shadow:0px 0px 3px rgb(180,0,0);
+	text-shadow:0px 0px 2px rgb(255,100,100);
 
 	-webkit-transition: text-shadow .2s ease;
 	-moz-transition:  text-shadow .2s ease;

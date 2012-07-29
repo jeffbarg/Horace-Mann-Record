@@ -45,6 +45,9 @@ class Article(models.Model):
 	def __unicode__(self):
 		return self.title
 	
+	def get_absolute_url(self):
+		return "/articles/%s/" % self.slug
+
 	def save(self):
 		if not self.id:
 			self.slug = slugify(self.title)
