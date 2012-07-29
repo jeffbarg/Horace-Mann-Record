@@ -1,7 +1,7 @@
 var sliderOptions=
 {
 	sliderId: "slider",
-	effect: "fade",
+	effect: "9",
 	effectRandom: false,
 	pauseTime: 2600,
 	transitionTime: 600,
