@@ -102,9 +102,10 @@ div.navBulletsWrapper div.active {background-position:0 -11px;}
 	background-repeat: round;
 
 	background-size: cover;
+	 -moz-background-size: cover;
 }
 
 .mcSlc {
 	background-size: cover;
-
+	 -moz-background-size: cover;
 }
