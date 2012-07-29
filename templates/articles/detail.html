@@ -20,7 +20,7 @@
 		<img src = "{% if article.authors.all.0.profile_picture %}
 			{{article.authors.all.0.profile_picture.url}}
 		{% else %}
-			http://bit.ly/QVmTS6
+			{{STATIC_URL}}img/recordicon.png
 		{% endif %}
 		" id = "authorimage"/>
 		<p>Written by <b>{{ article.authors.all|join:', ' }}</b>

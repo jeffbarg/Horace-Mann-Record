@@ -58,10 +58,14 @@
 
 #authorimage {
 
+	margin-top:10px;
+	
 	height: auto;
     max-height: 100%;
     width: auto;
     max-width: 100%;
+
+	-webkit-backface-visibility: hidden;
 
 	border-radius: 5px;	
 	border: 1px solid #444;
