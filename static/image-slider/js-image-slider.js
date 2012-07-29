@@ -12,6 +12,7 @@ var sliderOptions=
 	captionOpacity: 0.3,
 	captionEffect: "fade",
 	thumbnailsWrapperId: "thumbs",
+	license: "free"
 };
 
 var imageSlider=new mcImgSlider(sliderOptions);
