@@ -18,9 +18,8 @@
     max-width: 100%;
 
 
-    background-position: center top; 
-    background-size: auto;
-    
+
+
 	position:absolute;
 	border:none;
 	display:none;
@@ -98,4 +97,7 @@ div.navBulletsWrapper div.active {background-position:0 -11px;}
     -moz-transform:translate3d(0,0,0);
     -o-transform:translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
+
+    background-position: center top; 
+    background-size: auto;
 }
