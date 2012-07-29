@@ -53,8 +53,6 @@ MEDIA_ROOT = '/var/www/horacemannrecord.com/media/'
 # Examples: "http://example.com/media/", "http://media.example.com/"
 MEDIA_URL = '/media/'
 
-FILE_UPLOAD_MAX_MEMORY_SIZE = 0
-
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
