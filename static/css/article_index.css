@@ -43,8 +43,13 @@
 .section h1 {
 	font-size: 16pt;
 	margin: 0px;
-	height: 28px;
-	border-bottom: 1px dashed;
+	padding: 6px 0px;
+	border-top: 1px #6c6c6c dashed;
+	border-bottom: 1px #6c6c6c dashed;
+
+	color:#6c6c6c;
+	font-family: "Proxima Nova", "sans-serif";
+	text-align: center;
 }
 
 .section h1:after {
@@ -59,6 +64,7 @@
 	padding: 0px;
 	margin: 0px;
 	padding:10px 0;
+
 }
 
 .articlemetadata {

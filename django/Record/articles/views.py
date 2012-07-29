@@ -8,12 +8,12 @@ from django.shortcuts import render_to_response, get_object_or_404
 def index(request):
 	articleobjects = Article.objects.all()
 
-	oped_articles = articleobjects.filter(category = "OE").order_by('-date_published')[:3]
-	arts_articles = articleobjects.filter(category = "AE").order_by('-date_published')[:3]
-	lionsden_articles = articleobjects.filter(category = "LD").order_by('-date_published')[:3]
-	middledivision_articles = articleobjects.filter(category = "MD").order_by('-date_published')[:3]
-	news_articles = articleobjects.filter(category = "NW").order_by('-date_published')[:3]
-	features_articles = articleobjects.filter(category = "FT").order_by('-date_published')[:3]
+	oped_articles = articleobjects.filter(category = "OE").order_by('-date_published')[:2]
+	arts_articles = articleobjects.filter(category = "AE").order_by('-date_published')[:2]
+	lionsden_articles = articleobjects.filter(category = "LD").order_by('-date_published')[:2]
+	middledivision_articles = articleobjects.filter(category = "MD").order_by('-date_published')[:2]
+	news_articles = articleobjects.filter(category = "NW").order_by('-date_published')[:2]
+	features_articles = articleobjects.filter(category = "FT").order_by('-date_published')[:2]
 
 	t = loader.get_template('articles/index.html')
 	c = RequestContext(request, {

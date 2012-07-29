@@ -26,7 +26,7 @@ class Article(models.Model):
 	text 			 = models.TextField('Article Text', help_text = 'Copy and paste Article Text into here, then edit using built-in editor as needed.')
 	authors		 	 = models.ManyToManyField(Author)
 
-	slug 			 = models.SlugField('Slug', blank = True)
+	slug 			 = models.SlugField('Slug', max_length = 150, blank = True)
 
 	category 	 	 = models.CharField('Category', max_length=20, choices = CATEGORY_CHOICES)
 
