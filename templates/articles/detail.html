@@ -16,7 +16,8 @@
 	</div>
 
 	<div id = "sidebar">
-		<p><div id = "authorimage" style = "background-image:url('{{STATIC_URL}}img/moon.jpeg')"></div></p>
+		{# <p><div id = "authorimage" style = "background-image:url('{{STATIC_URL}}img/moon.jpeg')"></div></p> #}
+		<img src = "{{article.authors.all.0.profile_picture.url}}" maxheight = "200" maxwidth = "200"/>
 		<p>Written by <b>{{ article.authors.all|join:', ' }}</b>
 
 			<br />on <strong>August 23rd, 2012</strong> at <strong>4:05 PM</strong></p>

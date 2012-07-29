@@ -19,6 +19,7 @@ DATABASES = {
 		'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
 	}
 }
+TEMPLATE_STRING_IF_INVALID = "ERROR"
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -45,7 +46,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = '/Users/jeffba0rg/Fructose Tech/Horace-Mann-Record/static/'
+MEDIA_ROOT = '/Users/jeffbarg/Fructose Tech/Horace-Mann-Record/static/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
