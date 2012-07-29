@@ -17,6 +17,8 @@
     width: auto;
     max-width: 100%;
 
+    background-size: contain;
+
 	position:absolute;
 	border:none;
 	display:none;
