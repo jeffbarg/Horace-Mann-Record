@@ -12,6 +12,7 @@ urlpatterns = patterns('',
 	url(r'^articles/(?P<article_slug>[\w\-]+)/$', 'articles.views.detail'),
 	url(r'^sections/(?P<section>[\w\-]+)/$', 'articles.views.section'),
 
+	(r'^search/', include('haystack.urls')),
 )
 
 urlpatterns += staticfiles_urlpatterns()

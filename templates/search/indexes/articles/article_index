@@ -1,0 +1,5 @@
+{{ object.title }}
+{% for author in authors %}
+	{{author.get_full_name}}
+{% endfor %}
+{{ object.text }}
