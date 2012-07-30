@@ -17,17 +17,19 @@
 }
 
 .article {
-	overflow: hidden;
 	min-height: 200px;
 	margin: auto;
 	padding: 10px 0px;
+
+	overflow: hidden;
 	clear:both;
 	border-bottom: 1px dashed gray;
 }
 
-.article:last-child {
+.article:t-child {
 	border-bottom: none;
 }
+
 .articleinfo {
 
 	position: relative;
@@ -46,10 +48,14 @@
 	transition: transform .3s ease;
 }
 
-.articleinfo img:hover {
-	-webkit-transform: rotateZ(-4deg);
-	-moz-transform: rotateZ(-4deg);
-	transform: rotateZ(-4deg);
+.articleinfo:hover img {
+-webkit-transform: perspective(0)
+                   translate3d(20px, 10px, 0px)
+                   scale3d(1.05, 1.05, 1.05)
+                   rotate3d(49, 100, 88, 9deg);
+
+ 	-moz-transform: rotateZ(4deg);
+	transform: rotateZ(4deg);
 
 	-webkit-transition: -webkit-transform .3s ease;
 	-moz-transition:  -moz-transform .3s ease;
