@@ -163,7 +163,7 @@ import os
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
-        'PATH': '/var/www/horacemannrecord.com/whooshindexes/whoosh_index'),
+        'PATH': '/var/www/horacemannrecord.com/whooshindexes/whoosh_index',
     },
 }
 
