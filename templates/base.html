@@ -45,9 +45,9 @@
 				<li><a href="/static/aboutus/">About Us</a></li>
 				<li>
 					<div id="searchwrapper">
-						<form action="">
-							<input type="text" class="searchbox" name="s" value="" />
-							<input type="image" src="{{STATIC_URL}}img/searchicon.png" class="searchbox_submit" value="" />
+						<form action="/search">
+							<input type="text" class="searchbox" name="q" value="" />
+							<input type="submit" readonly = "readonly" style="background-image:url('{{STATIC_URL}}img/searchicon.png');" class="searchbox_submit" value="" />
 						</form>
 					</div>
 				</li>

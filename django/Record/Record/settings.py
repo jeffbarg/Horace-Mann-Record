@@ -159,11 +159,17 @@ LOGGING = {
 	}
 }
 
-import os
+# import os
+# HAYSTACK_CONNECTIONS = {
+#     'default': {
+#         'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+#         'PATH': '/var/www/horacemannrecord.com/whooshindexes/whoosh_index',
+#     },
+# }
+
+
 HAYSTACK_CONNECTIONS = {
     'default': {
-        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
-        'PATH': '/var/www/horacemannrecord.com/whooshindexes/whoosh_index',
+        'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
     },
 }
-
