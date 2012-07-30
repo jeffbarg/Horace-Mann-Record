@@ -46,7 +46,7 @@
 				<li>
 					<div id="searchwrapper">
 						<form action="/search">
-							<input type="text" class="searchbox" name="q" value="" />
+							<input type="text" class="searchbox" name="q" value="{% block searchtext %}{% endblock searchtext %}" />
 							<input type="submit" readonly = "readonly" style="background-image:url('{{STATIC_URL}}img/searchicon.png');" class="searchbox_submit" value="" />
 						</form>
 					</div>

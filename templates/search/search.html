@@ -4,28 +4,21 @@
         <link rel="stylesheet" href="{{STATIC_URL}}css/section_index.css" type="text/css" />
 {% endblock head %}
 
+{% if query %}
+    {% block searchtext %}{{query}}{% endblock searchtext %}
+{% endif %}
+
 {% block content %}
     <h2>Search</h2>
-
-     <form method="get" action=".">
-        <table>
-            {{ form.as_table }}
-            <tr>
-                <td>&nbsp;</td>
-                <td>
-                    <input type="submit" value="Search">
-                </td>
-            </tr>
-        </table>
-    </form>
-
         {% if query %}
+            
+
 
             {% for article in page.object_list %}
                 <div class = "article">
                     <div class = "articleinfo">
-                        <img src = "{% if article.authors.all.0.profile_picture %}
-                            {{article.authors.all.0.profile_picture.url}}
+                        <img src = "{% if article.featured_image %}
+                            {{article.featured_image.url}}
                         {% else %}
                             {{STATIC_URL}}img/recordicon.png
                         {% endif %}
