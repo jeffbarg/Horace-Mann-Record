@@ -5,7 +5,6 @@ from articles.models import Article
 
 class NoteIndex(indexes.SearchIndex, indexes.Indexable):
     text = indexes.CharField(document=True, use_template=True)
-    author = indexes.CharField(model_attr='user')
     date_published = indexes.DateTimeField(model_attr='date_published')
 
     def get_model(self):
