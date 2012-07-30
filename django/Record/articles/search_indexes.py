@@ -4,7 +4,7 @@ from articles.models import Article
 
 
 class ArticleIndex(indexes.SearchIndex, indexes.Indexable):
-    text = indexes.CharField(document=True, model_attr = "text")
+    text = indexes.CharField(document=True, use_template = True)
     date_published = indexes.DateTimeField(model_attr='date_published')
 
     def get_model(self):
@@ -12,5 +12,5 @@ class ArticleIndex(indexes.SearchIndex, indexes.Indexable):
 
     def index_queryset(self):
         """Used when the entire index for model is updated."""
-        return self.get_model().objects.all()
+        return Article.objects.all()
         #return self.get_model().objects.filter(date_published__lte=datetime.datetime.now())
