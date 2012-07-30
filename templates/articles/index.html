@@ -29,8 +29,8 @@
 			</div>
 			
 			<div class = "section">
-				<a href = "/sections/arts/"><h1>Arts &amp; Entertainment</h1></a>
-				{% for article in arts_articles %}
+				<a href = "/sections/features/"><h1>Features</h1></a>
+				{% for article in features_articles %}
 					<div class = "article">
 						<a href = "/articles/{{article.slug}}"><h2>{{article.title}}</h2></a>
 						<div class = "articlemetadata">
@@ -49,8 +49,8 @@
 		<div id = "rightcolumn">
 
 			<div class = "section">
-				<a href = "/sections/lionsden/"><h1>Lion&apos;s Den</h1></a>
-				{% for article in lionsden_articles %}
+				<a href = "/sections/news/"><h1>News</h1></a>
+				{% for article in news_articles %}
 					<div class = "article">
 						<a href = "/articles/{{article.slug}}"><h2>{{article.title}}</h2></a>
 						<div class = "articlemetadata">
@@ -64,6 +64,7 @@
 					</div>
 				{% endfor %}
 			</div>
+
 
 			<div class = "section">
 				<a href = "/sections/middledivision/"><h1>Middle Division</h1></a>
@@ -102,10 +103,9 @@
 		    </div>
 
 
-
 			<div class = "section">
-				<a href = "/sections/news/"><h1>News</h1></a>
-				{% for article in news_articles %}
+				<a href = "/sections/lionsden/"><h1>Lion&apos;s Den</h1></a>
+				{% for article in lionsden_articles %}
 					<div class = "article">
 						<a href = "/articles/{{article.slug}}"><h2>{{article.title}}</h2></a>
 						<div class = "articlemetadata">
@@ -121,8 +121,8 @@
 			</div>
 
 			<div class = "section">
-				<a href = "/sections/features/"><h1>Features</h1></a>
-				{% for article in features_articles %}
+				<a href = "/sections/arts/"><h1>Arts &amp; Entertainment</h1></a>
+				{% for article in arts_articles %}
 					<div class = "article">
 						<a href = "/articles/{{article.slug}}"><h2>{{article.title}}</h2></a>
 						<div class = "articlemetadata">
@@ -136,5 +136,6 @@
 					</div>
 				{% endfor %}
 			</div>
+
 		</div>
 {% endblock content %}

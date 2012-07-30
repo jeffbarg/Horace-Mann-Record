@@ -14,8 +14,8 @@ def index(request):
 	arts_articles = articleobjects.filter(category = "AE").order_by('-date_published')[:1]
 	lionsden_articles = articleobjects.filter(category = "LD").order_by('-date_published')[:1]
 	middledivision_articles = articleobjects.filter(category = "MD").order_by('-date_published')[:1]
-	news_articles = articleobjects.filter(category = "NW").order_by('-date_published')[:1]
-	features_articles = articleobjects.filter(category = "FT").order_by('-date_published')[:1]
+	news_articles = articleobjects.filter(category = "NW").order_by('-date_published')[:2]
+	features_articles = articleobjects.filter(category = "FT").order_by('-date_published')[:2]
 
 	image_articles = articleobjects.exclude(featured_image = '').order_by('-date_published')[:5]
 
