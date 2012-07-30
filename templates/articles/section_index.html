@@ -1,12 +1,33 @@
 {% extends "base.html" %}
-{% block title %}{{article.title}}{% endblock title %}
+{% block title %}{{category}}{% endblock title %}
 
 {% block head %}
-		<link rel="stylesheet" href="{{STATIC_URL}}css/article_detail.css" type="text/css" />
+		<link rel="stylesheet" href="{{STATIC_URL}}css/section_index.css" type="text/css" />
 {% endblock head %}
 
 {% block content %}
 
+<div id = "sectionheader">
+{{category}}
+</div>
 
+{% for article in articles %}
+	<div class = "article">
+		<div class = "articleinfo">
+			<img src = "{% if article.authors.all.0.profile_picture %}
+				{{article.authors.all.0.profile_picture.url}}
+			{% else %}
+				{{STATIC_URL}}img/recordicon.png
+			{% endif %}
+			" />
+		</div>
+		<div class = "articlewrapper">
+		<div class = "articlecontent">
+			{{article.text|safe|truncatewords:"6000"}}
+		</div>
+		</div>
+
+	</div>
+{% endfor %}
 
 {% endblock content %}

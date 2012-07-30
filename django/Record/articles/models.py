@@ -15,11 +15,11 @@ class Author(User):
 
 	def save(self):
 		if not self.id:
-			username = "%s%s" % (self.first_name, self.last_name)
-			while (not (Author.objects.get(username = username) == None)):
-				username = "%s%s" % (username, "_")
+			uname = "%s%s" % (self.first_name, self.last_name)
+			while (len(Author.objects.filter(username = uname)) > 0):
+				uname = "%s%s" % (uname, "_")
 
-			self.username = username
+			self.username = uname
 		super(Author, self).save()
 
 class Article(models.Model):

@@ -10,7 +10,8 @@ urlpatterns = patterns('',
 
 	url(r'^$', 'articles.views.index'),
 	url(r'^articles/(?P<article_slug>[\w\-]+)/$', 'articles.views.detail'),
-	
+	url(r'^sections/(?P<section>[\w\-]+)/$', 'articles.views.section'),
+
 )
 
 urlpatterns += staticfiles_urlpatterns()

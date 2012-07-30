@@ -4,6 +4,7 @@ from articles.models import Article
 from articles.models import Author
 from django.http import HttpResponse
 from django.shortcuts import render_to_response, get_object_or_404
+from django.http import Http404
 
 
 def index(request):
@@ -38,4 +39,36 @@ def detail(request, article_slug):
 	c = RequestContext(request, {
 		'article': article,
 		})
+	return HttpResponse(t.render(c))
+
+def section(request, section):
+	CATEGORY_CHOICES = {
+		'opeds': 'OE',
+		'arts': 'AE',
+		'features': 'FT',
+		'lionsden': "LD",
+		'middledivision': 'MD',
+		'news': 'NW',
+		}
+	if section not in CATEGORY_CHOICES:
+		raise Http404
+	category = CATEGORY_CHOICES[section]
+
+	verbose_categories = {
+		'OE': "Opinions & Editorials",
+		'AE': "Arts & Entertainment",
+		'FT': "Features",
+		'LD': "Lion's Den",
+		'MD': "Middle Division",
+		'NW': "News",
+	}
+
+	articles = Article.objects.filter(category = category).order_by('-date_published')[:10]
+
+	t = loader.get_template('articles/section_index.html')
+	c = RequestContext(request, {
+        'articles': articles,
+        'category': verbose_categories[category],
+    })
+
 	return HttpResponse(t.render(c))
