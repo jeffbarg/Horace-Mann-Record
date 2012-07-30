@@ -14,7 +14,7 @@ class ArticleAdmin(admin.ModelAdmin):
 class AuthorAdmin(admin.ModelAdmin):
 	fieldsets = (
 		(None, 
-			{ 'fields' : ('username', 'first_name', 'last_name',) }), 
+			{ 'fields' : ('first_name', 'last_name',) }), 
 		('Optional Info',
 			{'fields' : ('bio', 'profile_picture'),
 			 'classes': ('collapse',),}),

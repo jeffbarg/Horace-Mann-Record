@@ -13,6 +13,16 @@ class Author(User):
 	def __unicode__(self):
 		return self.first_name + " " + self.last_name
 
+	def save(self):
+		if not self.id:
+			username = "%s%s" % (self.first_name, self.last_name)
+			while (!(Author.objects.get(username = username) == None)) {
+				username = "%s%s" % (username, "_")
+			}
+
+			self.username = username
+		super(Author, self).save()
+		
 class Article(models.Model):
 	CATEGORY_CHOICES = (
 		('OE', 'Opinions and Editorials'),
