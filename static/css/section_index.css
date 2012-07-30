@@ -33,7 +33,7 @@
 .articleinfo {
 
 	position: relative;
-	width: 200px;
+	width: 160px;
 	float:left;
 	height: 100%;
 }
@@ -62,22 +62,51 @@
 	transition: transform .3s ease;
 
 }
+.authors {
+	-webkit-transition: margin .3s ease;
+	-moz-transition:  margin .3s ease;
+	transition: margin .3s ease;
+
+		-webkit-transition: -webkit-transform .3s ease;
+	-moz-transition:  -moz-transform .3s ease;
+	transition: transform .3s ease;
+}
+.articleinfo:hover .authors {
+
+
+	-webkit-transform: rotate(6deg) translate3d(6px, 12px, 0px);
+
+	-webkit-transition: margin .3s ease;
+	-moz-transition:  margin .3s ease;
+	transition: margin .3s ease;
+
+	-webkit-transition: -webkit-transform .3s ease;
+	-moz-transition:  -moz-transform .3s ease;
+	transition: transform .3s ease;
+}
+
+.authors {
+	font-weight: 600;
+}
 
 .articlewrapper {
 	width:100%;
 	height: 100%;
 	margin-right: -200px;
 	float:right;
-
 }
 
 .articlecontent {
 	margin-right: 200px;
 }
 
-.articlecontent p:first-child {
-	margin-top: 0px;
+/*.articletext p:first-child {
+	margin-top: 5px;
 }
-.articlecontent p:last-child {
+.articletext p:last-child {
 	margin-bottom: 0px;
+}*/
+
+.articletitle {
+	font-size: 22pt;
 }

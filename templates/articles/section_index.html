@@ -20,10 +20,18 @@
 				{{STATIC_URL}}img/recordicon.png
 			{% endif %}
 			" />
+
+			<div class = "authors">
+				WRITTEN BY {{article.authors.all |join:', ' |upper}}
+			</div>
 		</div>
 		<div class = "articlewrapper">
 		<div class = "articlecontent">
-			{{article.text|safe|truncatewords:"6000"}}
+			<a href = "/articles/{{article.slug}}"><div class = "articletitle">{{article.title}}</div></a>
+
+			<div class = "articletext">
+			{{article.text|safe|truncatewords:"300"}}
+			</div>
 		</div>
 		</div>
 
