@@ -28,17 +28,21 @@
 			<br />on <strong>August 23rd, 2012</strong> at <strong>4:05 PM</strong></p>
 		
 		<hr />
-		<h2>More Articles by this Author</h2>
+		<h2>More Articles by {{author}}</h2>
 		<ul>
-			<li><a href = "http://jeffbarg">Awesome College Planning App Made by Horace Mann Students</a></li>
-			<li><a href = "http://jeffbarg">Awesome College Planning App Made by Horace Mann Students</a></li>
-			<li><a href = "http://jeffbarg">Awesome College Planning App Made by Horace Mann Students</a></li>
-			<li><a href = "http://jeffbarg">Awesome College Planning App Made by Horace Mann Students</a></li>
-			<li><a href = "http://jeffbarg">Awesome College Planning App Made by Horace Mann Students</a></li>
-			<li><a href = "http://jeffbarg">Awesome College Planning App Made by Horace Mann Students</a></li>
+			{% if other_articles.len > 0 %}
+				{% for other_article in other_articles %}
+					{% if article != other_article %}
+						<li><a href = "/articles/{{other_article.slug}}">{{other_article.title}}</a></li>
+					{% endif %}
+				{% endfor %}
+			{% else %}
+				<i>No Other Articles</i>
+			{% endif %}
+
 		</ul>
 		
-		<hr />
+
 		 
 	</div>
 
