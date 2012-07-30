@@ -25,15 +25,19 @@
                         " />
 
                         <div class = "authors">
-                            WRITTEN BY {{article.authors.all|join:', '|upper}}
+                            WRITTEN BY {% for author in author.objects.all %}
+                                {{article}}
+                            {% endfor %}
                         </div>
                     </div>
                     <div class = "articlewrapper">
                     <div class = "articlecontent">
                         <a href = "/articles/{{article.slug}}"><div class = "articletitle">{{article.title}}</div></a>
 
+
                         <div class = "articletext">
-                        {{article.text|safe|truncatewords:"250"}}<a href = "/articles/{{article.slug}}"><b>Continue Reading</b></a>
+                        {{ article.text|safe|truncatewords:"250" }}
+                        <a href = "/articles/{{article.slug}}"><b>Continue Reading</b></a>
                         </div>
                     </div>
                     </div>
