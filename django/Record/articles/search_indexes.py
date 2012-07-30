@@ -3,8 +3,8 @@ from haystack import indexes
 from articles.models import Article
 
 
-class NoteIndex(indexes.SearchIndex, indexes.Indexable):
-    text = indexes.CharField(document=True, use_template=True)
+class ArticleIndex(indexes.SearchIndex, indexes.Indexable):
+    text = indexes.CharField(document=True, model_attr = "text")
     date_published = indexes.DateTimeField(model_attr='date_published')
 
     def get_model(self):
