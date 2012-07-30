@@ -16,9 +16,8 @@ class Author(User):
 	def save(self):
 		if not self.id:
 			username = "%s%s" % (self.first_name, self.last_name)
-			while (not (Author.objects.get(username = username) == None)) {
+			while (not (Author.objects.get(username = username) == None)):
 				username = "%s%s" % (username, "_")
-			}
 
 			self.username = username
 		super(Author, self).save()
