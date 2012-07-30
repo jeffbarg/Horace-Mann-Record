@@ -10,12 +10,12 @@ from django.http import Http404
 def index(request):
 	articleobjects = Article.objects
 
-	oped_articles = articleobjects.filter(category = "OE").order_by('-date_published')[:2]
-	arts_articles = articleobjects.filter(category = "AE").order_by('-date_published')[:2]
-	lionsden_articles = articleobjects.filter(category = "LD").order_by('-date_published')[:2]
-	middledivision_articles = articleobjects.filter(category = "MD").order_by('-date_published')[:2]
-	news_articles = articleobjects.filter(category = "NW").order_by('-date_published')[:2]
-	features_articles = articleobjects.filter(category = "FT").order_by('-date_published')[:2]
+	oped_articles = articleobjects.filter(category = "OE").order_by('-date_published')[:1]
+	arts_articles = articleobjects.filter(category = "AE").order_by('-date_published')[:1]
+	lionsden_articles = articleobjects.filter(category = "LD").order_by('-date_published')[:1]
+	middledivision_articles = articleobjects.filter(category = "MD").order_by('-date_published')[:1]
+	news_articles = articleobjects.filter(category = "NW").order_by('-date_published')[:1]
+	features_articles = articleobjects.filter(category = "FT").order_by('-date_published')[:1]
 
 	image_articles = articleobjects.exclude(featured_image = '').order_by('-date_published')[:5]
 
