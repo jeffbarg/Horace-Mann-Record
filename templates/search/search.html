@@ -9,34 +9,20 @@
 {% endif %}
 
 {% block content %}
-    <h2>Search</h2>
+    <div id = "sectionheader">Search</div>
         {% if query %}
             
 
 
             {% for article in page.object_list %}
                 <div class = "article">
-                    <div class = "articleinfo">
-                        <img src = "{% if article.featured_image %}
-                            {{article.featured_image.url}}
-                        {% else %}
-                            {{STATIC_URL}}img/recordicon.png
-                        {% endif %}
-                        " />
-
-                        <div class = "authors">
-                            WRITTEN BY {% for author in author.objects.all %}
-                                {{article}}
-                            {% endfor %}
-                        </div>
-                    </div>
-                    <div class = "articlewrapper">
-                    <div class = "articlecontent">
+                    <div class = "articlewrapper" style = "margin:auto;">
+                    <div class = "articlecontent" style = "margin:auto;">
                         <a href = "/articles/{{article.slug}}"><div class = "articletitle">{{article.title}}</div></a>
 
 
                         <div class = "articletext">
-                        {{ article.text|safe|truncatewords:"250" }}
+                        {{ article.text|safe|truncatewords:"200" }}
                         <a href = "/articles/{{article.slug}}"><b>Continue Reading</b></a>
                         </div>
                     </div>
