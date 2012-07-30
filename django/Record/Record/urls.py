@@ -5,9 +5,6 @@ admin.autodiscover()
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-import haystack
-haystack.autodiscover()
-
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
