@@ -13,6 +13,8 @@ class Author(User):
 	def __unicode__(self):
 		return self.first_name + " " + self.last_name
 
+
+
 	def save(self):
 		if not self.id:
 			uname = "%s%s" % (self.first_name, self.last_name)
@@ -33,7 +35,7 @@ class Article(models.Model):
 	)
 	title 			 = models.CharField('Title', help_text = 'Must be under 140 characters.', max_length=140)
 	text 			 = models.TextField('Article Text', help_text = 'Copy and paste Article Text into here, then edit using built-in editor as needed.')
-	authors		 	 = models.ManyToManyField(Author)
+	authors		 	 = models.ManyToManyField(Author, related_name='articles')
 
 	slug 			 = models.SlugField('Slug', max_length = 150, blank = True)
 

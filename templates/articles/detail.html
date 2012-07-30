@@ -28,10 +28,10 @@
 			<br />on <strong>August 23rd, 2012</strong> at <strong>4:05 PM</strong></p>
 		
 		<hr />
-		<h2>More Articles by {{author.first_name}}</h2>
+		<h2>More Articles by {{author}}</h2>
 		<ul>
-			{% if other_articles.len > 0 %}
-				{% for other_article in other_articles %}
+			{% if author.articles.all.count > 1 %}
+				{% for other_article in author.articles.all %}
 					{% if article != other_article %}
 						<li><a href = "/articles/{{other_article.slug}}">{{other_article.title}}</a></li>
 					{% endif %}

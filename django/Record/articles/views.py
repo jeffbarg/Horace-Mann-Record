@@ -34,14 +34,12 @@ def index(request):
 def detail(request, article_slug):
 	article = get_object_or_404(Article, slug = article_slug)
 	author = article.authors.all()[0]
-	other_articles = Article.objects.filter(authors = author).order_by('-date_published')[:2]
 
 	# authors = article.authors.all
 	
 	t = loader.get_template('articles/detail.html')
 	c = RequestContext(request, {
 		'article': article,
-		'other_articles':other_articles,
 		'author': author
 		})
 
