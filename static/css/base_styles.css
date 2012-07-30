@@ -273,10 +273,21 @@ a:visited {
 	display: inline-block;
 }
 #fructosetech:hover	 {
-	-webkit-transform: rotate(359deg);
+/*	-webkit-transform: rotate(359deg);
 	-moz-transform: rotateZ(359deg);
 	-webkit-transition: -webkit-transform 0.5s ease;
-	-moz-transition:  -webkit-transform 0.5s ease;
+	-moz-transition:  -webkit-transform 0.5s ease;*/
+
+	-webkit-animation: infinite-spinning linear 0.4s infinite;
+}
+
+@-webkit-keyframes infinite-spinning {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 #fructosetech:hover	a {
