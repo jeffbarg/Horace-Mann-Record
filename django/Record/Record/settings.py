@@ -123,6 +123,7 @@ INSTALLED_APPS = (
 	# Uncomment the next line to enable the admin:
 	'django.contrib.admin',
 	'south',
+	'haystack',
 	# Uncomment the next line to enable admin documentation:
 	# 'django.contrib.admindocs',
 	'articles',
@@ -156,4 +157,13 @@ LOGGING = {
 			'propagate': True,
 		},
 	}
+}
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'URL': 'http://127.0.0.1:8983/solr'
+        # ...or for multicore...
+        # 'URL': 'http://127.0.0.1:8983/solr/mysite',
+    },
 }

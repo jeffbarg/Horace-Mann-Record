@@ -1,0 +1,32 @@
+[Sun Jul 29 04:00:13 2012] [error] [client 74.68.139.238] Premature end of script headers: django.wsgi, referer: http://horacemannrecord.com/admin/articles/author/7/
+[Sun Jul 29 09:50:29 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-29 09:50:29.338442) while time zone support is active.
+[Sun Jul 29 09:50:29 2012] [error]   RuntimeWarning)
+[Sun Jul 29 09:50:29 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-29 09:50:29.338429) while time zone support is active.
+[Sun Jul 29 09:50:29 2012] [error]   RuntimeWarning)
+[Sun Jul 29 10:53:19 2012] [error] [client 74.68.139.238] Premature end of script headers: django.wsgi, referer: http://horacemannrecord.com/admin/articles/author/17/
+[Sun Jul 29 10:54:49 2012] [error] [client 74.68.139.238] Premature end of script headers: django.wsgi, referer: http://horacemannrecord.com/admin/articles/author/17/
+[Sun Jul 29 10:54:53 2012] [error] [client 74.68.139.238] Premature end of script headers: django.wsgi, referer: http://horacemannrecord.com/admin/articles/author/17/
+[Sun Jul 29 10:56:32 2012] [error] [client 74.68.139.238] Premature end of script headers: django.wsgi, referer: http://horacemannrecord.com/admin/articles/author/17/
+[Sun Jul 29 10:56:36 2012] [error] [client 74.68.139.238] Premature end of script headers: django.wsgi, referer: http://horacemannrecord.com/admin/articles/author/17/
+[Sun Jul 29 10:58:04 2012] [error] [client 74.68.139.238] Premature end of script headers: django.wsgi, referer: http://horacemannrecord.com/admin/articles/article/13/
+[Sun Jul 29 11:04:54 2012] [error] [client 74.68.139.238] Premature end of script headers: django.wsgi, referer: http://horacemannrecord.com/admin/articles/author/16/
+[Sun Jul 29 12:15:43 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-29 12:15:43.741368) while time zone support is active.
+[Sun Jul 29 12:15:43 2012] [error]   RuntimeWarning)
+[Sun Jul 29 12:18:22 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-29 12:18:22.119641) while time zone support is active.
+[Sun Jul 29 12:18:22 2012] [error]   RuntimeWarning)
+[Sun Jul 29 13:00:37 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-29 13:00:37.793187) while time zone support is active.
+[Sun Jul 29 13:00:37 2012] [error]   RuntimeWarning)
+[Sun Jul 29 13:01:17 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-29 13:01:17.312380) while time zone support is active.
+[Sun Jul 29 13:01:17 2012] [error]   RuntimeWarning)
+[Sun Jul 29 13:02:56 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-29 13:02:56.875596) while time zone support is active.
+[Sun Jul 29 13:02:56 2012] [error]   RuntimeWarning)
+[Sun Jul 29 13:03:09 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-29 13:03:09.562120) while time zone support is active.
+[Sun Jul 29 13:03:09 2012] [error]   RuntimeWarning)
+[Sun Jul 29 13:52:07 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-29 13:52:07.037129) while time zone support is active.
+[Sun Jul 29 13:52:07 2012] [error]   RuntimeWarning)
+[Sun Jul 29 15:28:57 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-29 15:28:57.312544) while time zone support is active.
+[Sun Jul 29 15:28:57 2012] [error]   RuntimeWarning)
+[Sun Jul 29 15:34:35 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-29 15:34:35.683079) while time zone support is active.
+[Sun Jul 29 15:34:35 2012] [error]   RuntimeWarning)
+[Mon Jul 30 07:55:25 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-30 07:55:25.465759) while time zone support is active.
+[Mon Jul 30 07:55:25 2012] [error]   RuntimeWarning)
