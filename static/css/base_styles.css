@@ -1,12 +1,14 @@
 body {
 	margin:auto;
-
 	background-image:-moz-linear-gradient(rgb(190,0,0) 0%, rgba(120,0,0,0) 100%);
 	background-image:-webkit-linear-gradient(rgb(190,0,0) 0%, rgba(120,0,0,0) 100%);
-	background-repeat: no-repeat;	
-	background-color: rgb(100,0,0);
 	background-size: 1px 240px;
 	background-repeat: repeat-x;
+	
+
+	background-color: rgb(100,0,0);
+	
+	
 
 	color: inherit;
 
