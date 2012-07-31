@@ -7,7 +7,7 @@ from django.http import Http404
 # Create your views here.
 
 def latest(request):
-	issue = PrintIssue.objects.order_by('-date_published')[:1]
+	issue = PrintIssue.objects.order_by('-date_published')[:1].all()[0]
 
 	# authors = article.authors.all
 	
