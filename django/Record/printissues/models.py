@@ -23,7 +23,6 @@ class PrintIssue(models.Model):
 
 	def save(self):
 		if not self.id:
-			self.slug = slugify(self.title)
 			self.date_published = datetime.datetime.today()
 		self.last_updated = datetime.datetime.today()
 		super(PrintIssue, self).save()
