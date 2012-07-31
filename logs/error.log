@@ -30,3 +30,10 @@
 [Sun Jul 29 15:34:35 2012] [error]   RuntimeWarning)
 [Mon Jul 30 07:55:25 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-30 07:55:25.465759) while time zone support is active.
 [Mon Jul 30 07:55:25 2012] [error]   RuntimeWarning)
+[Tue Jul 31 15:33:15 2012] [error] [client 108.54.50.54] (70014)End of file found: mod_wsgi (pid=22054): Unable to get bucket brigade for request., referer: http://horacemannrecord.com/admin/printissues/printissue/add/
+[Tue Jul 31 14:33:16 2012] [error] [client 108.54.50.54] mod_wsgi (pid=22052): Exception occurred processing WSGI script '/var/www/horacemannrecord.com/django/Record/django.wsgi'.
+[Tue Jul 31 14:33:16 2012] [error] [client 108.54.50.54] IOError: failed to write data
+[Tue Jul 31 14:39:52 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-31 14:39:52.013757) while time zone support is active.
+[Tue Jul 31 14:39:52 2012] [error]   RuntimeWarning)
+[Tue Jul 31 14:39:52 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-31 14:39:52.013739) while time zone support is active.
+[Tue Jul 31 14:39:52 2012] [error]   RuntimeWarning)
