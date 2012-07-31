@@ -16,7 +16,7 @@ class PrintIssue(models.Model):
 	last_updated	 = models.DateTimeField('Last Updated', blank = True)
 	date_published	 = models.DateTimeField('Date Published', blank = True)
 
-
+oped_articles = articleobjects.filter(category = "OE").order_by('-date_published')[:1]
 	def __unicode__(self):
 		return self.title
 	
