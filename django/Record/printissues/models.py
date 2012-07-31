@@ -15,6 +15,9 @@ class PrintIssue(models.Model):
 	last_updated	 = models.DateTimeField('Last Updated', blank = True)
 	date_published	 = models.DateTimeField('Date Published', blank = True)
 	
+	def __unicode__(self):
+		return u"a print issue"
+
 	def get_absolute_url(self):
 		return "/articles/%s/" % self.slug
 
