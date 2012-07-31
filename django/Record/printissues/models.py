@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import User
 import datetime
 from django.template.defaultfilters import slugify
 
@@ -27,4 +26,4 @@ class PrintIssue(models.Model):
 			self.slug = slugify(self.title)
 			self.date_published = datetime.datetime.today()
 		self.last_updated = datetime.datetime.today()
-		super(Article, self).save()
+		super(PrintIssue, self).save()
