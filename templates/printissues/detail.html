@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}{{article.title}}{% endblock title %}
+
+{% block head %}
+		<link rel="stylesheet" href="{{STATIC_URL}}css/printissue_detail.css" type="text/css" />
+{% endblock head %}
+
+
+{% block content %}
+
+<script type='text/javascript' src='http://www.scribd.com/javascripts/scribd_api.js'></script>
+
+<div id='embedded_doc'><img src = "/static/image-slider/loading.gif" /></div>
+
+<script type="text/javascript">
+  var url = '{{issue.file}}';
+  var pub_id = 'pub-91915368267334777516';
+  var scribd_doc = scribd.Document.getDocFromUrl(url, pub_id);
+
+  var onDocReady = function(e){
+    scribd_doc.api.setPage(1);
+  }
+
+  scribd_doc.addEventListener('docReady', onDocReady);
+  scribd_doc.addParam('jsapi_version', 2);
+  scribd_doc.addParam('height', 1000);
+  scribd_doc.addParam('width', 900);
+  scribd_doc.addParam('public', true);
+  
+  scribd_doc.write('embedded_doc');
+</script>
+
+
+{% endblock content %}

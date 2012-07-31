@@ -297,4 +297,7 @@ a:visited {
 #content {
 	padding-left: 25px;
 	padding-right: 25px;
+
+	clear:both;
+	overflow: hidden;
 }

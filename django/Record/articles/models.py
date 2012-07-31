@@ -1,8 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 import datetime
-from django.db.models.signals import pre_save
-from django.dispatch import receiver
 from django.template.defaultfilters import slugify
 
 # Create your models here.
@@ -42,7 +40,6 @@ class Article(models.Model):
 	category 	 	 = models.CharField('Category', max_length=20, choices = CATEGORY_CHOICES)
 
 	is_featured		 = models.BooleanField('Featured' , help_text = 'Is this article in a featured section?')
-	is_published	 = models.BooleanField('Published', help_text = 'Should this article be published immediately?')
 
 	#Date Fields (Technically optional in admin view.  Should always be set.)
 
