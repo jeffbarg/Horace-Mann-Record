@@ -14,16 +14,16 @@
             
 
 
-            {% for article in page.object_list %}
+            {% for result in page.object_list %}
                 <div class = "article">
                     <div class = "articlewrapper" style = "margin:auto;">
                     <div class = "articlecontent" style = "margin:auto;">
-                        <a href = "/articles/{{article.slug}}"><div class = "articletitle">{{article.title}}</div></a>
+                        <a href = "/articles/{{result.object.slug}}"><div class = "articletitle">{{result.object.title}}</div></a>
 
 
                         <div class = "articletext">
-                        {{ article.text|safe|truncatewords:"200" }}
-                        <a href = "/articles/{{article.slug}}"><b>Continue Reading</b></a>
+                        {{ result.object.text|safe|truncatewords:"200" }}
+                        <a href = "/articles/{{result.object.slug}}"><b>Continue Reading</b></a>
                         </div>
                     </div>
                     </div>
