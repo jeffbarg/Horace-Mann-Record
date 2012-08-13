@@ -1,8 +1,9 @@
 from django.core.management import setup_environ
 from Record import settings
-import dateutil.parser
 
 setup_environ(settings)
+
+import dateutil.parser
 
 from articles.models import Article, Author
 
