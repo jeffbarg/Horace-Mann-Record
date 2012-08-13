@@ -6,7 +6,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
 	fieldsets = (
 	(None, 
-		{ 'fields' : ('title', 'text', 'authors', 'category') }), 
+		{ 'fields' : ('title', 'text', 'authors', 'category', 'featured_image') }), 
 	('Optional Info',
 		{'fields' : ('slug', 'date_published', 'is_featured'),
 		 'classes': ('collapse',),}),
