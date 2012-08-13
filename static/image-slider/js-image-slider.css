@@ -98,9 +98,14 @@ div.navBulletsWrapper div.active {background-position:0 -11px;}
     -o-transform:translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
 
-	background-size: cover;
+
+	background-size: 100% auto;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
 }
 
 .mcSlc {
-	background-size: cover;
+		background-size: 100% auto;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
 }
