@@ -88,7 +88,7 @@
 			
 			<div id="sliderFrame" style = "background-size: cover;">
 		        <div id="ribbon"></div>
-		        <div id="slider">
+		        <div id="slider" style="background-size:cover;">
 		        	{% for article in image_articles %}
 		        		<a href = "/articles/{{article.slug}}">
 		        		<img src="{{article.featured_image.url}}" alt="{{article.title}}" />
