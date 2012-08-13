@@ -14,11 +14,14 @@ class ArticleAdmin(admin.ModelAdmin):
 
 	filter_vertical = ('authors',)
 	#inlines = [ArticleTagInline]
+	list_display = ('title',)
+	search_fields = ['authors__first_name', 'authors__last_name', 'text']
 	class Media:
 
 		js = ('js/tiny_mce/tiny_mce.js',
 			 'js/appmedia/textareas.js',)
-	
+		
+
 	
 class AuthorAdmin(admin.ModelAdmin):
 	fieldsets = (
@@ -29,6 +32,7 @@ class AuthorAdmin(admin.ModelAdmin):
 			 'classes': ('collapse',),}),
 		)
 
+	list_display = ('get_full_name', 'last_name', 'username')
 
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Author, AuthorAdmin)
