@@ -4,9 +4,14 @@
 	padding-left: 25px;
 	padding-right: 25px;
 	padding-bottom: 25px;
+
+
 }
 
+body {
+		-webkit-animation: infinite-spinning linear 15s infinite;
 
+}
 #leftcolumn {
 	float:left;
 	width:30%;
