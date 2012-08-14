@@ -30,8 +30,6 @@
 	max-height: 500px;
 
 
-	background-size: cover;
-
 	float: left;
 	box-shadow: inset 0px 0px 10px 8px white;
 }
@@ -86,9 +84,8 @@
     width: auto;
     max-width: 100%;
 
-	-webkit-backface-visibility: hidden;
+	border-radius: 5px;
 
-	border-radius: 121px;	
 	border: 1px solid #444;
 	box-shadow: 0px 1px 4px black;
 	-webkit-transition: -webkit-transform .3s ease;
