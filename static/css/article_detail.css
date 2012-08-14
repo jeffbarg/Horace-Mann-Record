@@ -23,7 +23,7 @@
 }
 
 #featured_image {
-	width: 100%;
+	width: auto;
 	height: auto;
 
 	max-width: 100%;
@@ -36,6 +36,11 @@
 
 #articlecontent {
 	clear:both;
+}
+
+#articlecontent:first-letter {
+	font-size:xx-large;
+	font-weight: 900;
 }
 
 #sidebar {
