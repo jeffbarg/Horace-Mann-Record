@@ -29,7 +29,12 @@
 	height: auto;
 	width: auto;
 	display: inline-block;
-	box-shadow: inset 0px 0px 10px 5px white;
+	float: left;
+	box-shadow: inset 0px 0px 10px 8px white;
+}
+
+#articlecontent {
+	clear:both;
 }
 
 #sidebar {
