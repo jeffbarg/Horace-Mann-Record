@@ -15,7 +15,7 @@ class ArticleAdmin(admin.ModelAdmin):
 	filter_vertical = ('authors',)
 	#inlines = [ArticleTagInline]
 	list_display = ('title',)
-	search_fields = ['authors__first_name', 'authors__last_name', 'text']
+	search_fields = ['authors__first_name', 'authors__last_name',]
 	class Media:
 
 		js = ('js/tiny_mce/tiny_mce.js',
