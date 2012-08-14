@@ -27,7 +27,7 @@
 	max-height: 400px;
 	background-size: cover;
 	height: auto;
-	width: auto;
+	width: 100%;
 	display: inline-block;
 	float: left;
 	box-shadow: inset 0px 0px 10px 8px white;
