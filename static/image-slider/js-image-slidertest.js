@@ -660,6 +660,7 @@ function mcImgSlider(e) {
 				d.background = 'url("' + b.e.getAttribute("src") + '") no-repeat -' + e * g + "px 0%";
 				if (f == 10) d.background = 'url("' + b.e.getAttribute("src") + '") no-repeat right top';
 				else if (f == 12) d.background = 'url("' + b.e.getAttribute("src") + '") no-repeat left bottom';
+				d.backgroundSize = "cover";
 				d.zIndex = 1;
 				d.position = "absolute";
 				t(h, 0);
@@ -679,6 +680,7 @@ function mcImgSlider(e) {
 				e.width = d.w + "px";
 				e.height = d.h + "px";
 				e.background = 'url("' + b.e.getAttribute("src") + '") no-repeat -' + f * i + "px -" + g * h + "px";
+				e.backgroundSize = "cover";
 				e.zIndex = 1;
 				e.position = "absolute";
 				t(d, 0);
