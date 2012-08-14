@@ -26,6 +26,7 @@
 {
     display:block;
     position:relative;
+    float:left;
 }
  
 .shadow::before
