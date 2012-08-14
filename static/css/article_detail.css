@@ -27,8 +27,7 @@
 	max-height: 400px;
 	height: auto;
 	width: auto;
-	box-shadow: inset 50px white;
-	clear:none;
+	box-shadow: inset 40px white;
 }
 
 #sidebar {
