@@ -11,7 +11,7 @@
 		<div id = "article">
 			<h1>{{article.title}}</h1>
 			{% if article.featured_image %}
-			<img src = "{{article.featured_image}}" id = "featured_image"/>
+			<img src = "{{article.featured_image.url}}" id = "featured_image"/>
 			{% endif %}
 			{{article.text|safe|escape}}
 		</div>
