@@ -660,9 +660,9 @@ function mcImgSlider(e) {
 				d.background = 'url("' + b.e.getAttribute("src") + '") no-repeat -' + e * g + "px 0%";
 				if (f == 10) d.background = 'url("' + b.e.getAttribute("src") + '") no-repeat right top';
 				else if (f == 12) d.background = 'url("' + b.e.getAttribute("src") + '") no-repeat left bottom';
-				d.backgroundSize = "cover";
 				d.zIndex = 1;
 				d.position = "absolute";
+				d.backgroundSize = "cover";
 				t(h, 0);
 				c.appendChild(h);
 				i.push(h)
