@@ -28,7 +28,7 @@
 	height: auto;
 	width: auto;
 	display: inline-block;
-	box-shadow: inset 0px 0px 40px white;
+	box-shadow: inset 0px 0px 10px 10px white;
 }
 
 #sidebar {
