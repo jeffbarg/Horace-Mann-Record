@@ -37,3 +37,17 @@
 [Tue Jul 31 14:39:52 2012] [error]   RuntimeWarning)
 [Tue Jul 31 14:39:52 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-07-31 14:39:52.013739) while time zone support is active.
 [Tue Jul 31 14:39:52 2012] [error]   RuntimeWarning)
+[Mon Aug 13 23:59:56 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-08-13 23:59:56.753918) while time zone support is active.
+[Mon Aug 13 23:59:56 2012] [error]   RuntimeWarning)
+[Tue Aug 14 00:00:53 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-08-14 00:00:53.397698) while time zone support is active.
+[Tue Aug 14 00:00:53 2012] [error]   RuntimeWarning)
+[Tue Aug 14 14:29:10 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-08-14 14:29:10.450918) while time zone support is active.
+[Tue Aug 14 14:29:10 2012] [error]   RuntimeWarning)
+[Tue Aug 14 15:38:27 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-08-14 15:38:27.595546) while time zone support is active.
+[Tue Aug 14 15:38:27 2012] [error]   RuntimeWarning)
+[Tue Aug 14 16:12:12 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-08-14 16:12:12.160729) while time zone support is active.
+[Tue Aug 14 16:12:12 2012] [error]   RuntimeWarning)
+[Tue Aug 14 16:12:38 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-08-14 16:12:38.431819) while time zone support is active.
+[Tue Aug 14 16:12:38 2012] [error]   RuntimeWarning)
+[Tue Aug 14 16:12:38 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-08-14 16:12:38.870169) while time zone support is active.
+[Tue Aug 14 16:12:38 2012] [error]   RuntimeWarning)
