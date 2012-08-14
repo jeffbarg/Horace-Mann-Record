@@ -51,13 +51,13 @@
 }
 
 #articlecontent {
-	margin-top:10px;
+	margin-top:26px;
 
 	clear:both;
 }
 
 #articlecontent:first-letter {
-	font-size:xx-large;
+	font-size:x-large;
 	font-weight: 900;
 }
 
