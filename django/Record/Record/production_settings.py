@@ -1,6 +1,6 @@
 # Django settings for Record project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -46,7 +46,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = '/Users/jeffbarg/Fructose Tech/Horace-Mann-Record/media/'
+MEDIA_ROOT = '/var/www/horacemannrecord.com/media/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -65,7 +65,6 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-	'/Users/jeffbarg/Fructose Tech/Horace-Mann-Record/static/',
 	# Put strings here, like "/home/html/static" or "C:/www/django/static".
 	# Always use forward slashes, even on Windows.
 	# Don't forget to use absolute paths, not relative paths.
@@ -105,7 +104,7 @@ ROOT_URLCONF = 'Record.urls'
 WSGI_APPLICATION = 'Record.wsgi.application'
 
 TEMPLATE_DIRS = (
-	"/Users/jeffbarg/Fructose Tech/Horace-Mann-Record/templates/",
+	"/var/www/horacemannrecord.com/templates/",
 
 	# Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
 	# Always use forward slashes, even on Windows.
@@ -158,17 +157,17 @@ LOGGING = {
 	}
 }
 
-# import os
-# HAYSTACK_CONNECTIONS = {
-#     'default': {
-#         'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
-#         'PATH': '/var/www/horacemannrecord.com/whooshindexes/whoosh_index',
-#     },
-# }
-
-
+import os
 HAYSTACK_CONNECTIONS = {
     'default': {
-        'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': '/var/www/horacemannrecord.com/whooshindexes/whoosh_index',
     },
 }
+
+
+# HAYSTACK_CONNECTIONS = {
+#     'default': {
+#         'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
+#     },
+# }
