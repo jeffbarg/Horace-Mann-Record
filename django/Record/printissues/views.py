@@ -7,7 +7,7 @@ from django.http import Http404
 # Create your views here.
 
 def latest(request):
-	issue = PrintIssue.objects.order_by('-date_published')[:1].all()[0]
+	issue = PrintIssue.objects.order_by('-volume', '-issue')[:1].all()[0]
 
 	# authors = article.authors.all
 	
@@ -19,7 +19,7 @@ def latest(request):
 	return HttpResponse(t.render(c))
 
 def archive(request):
-	issues = PrintIssue.objects.order_by('-date_published')
+	issues = PrintIssue.objects.order_by('-volume', '-issue')
 	
 	t = loader.get_template('printissues/archive.html')
 	c = RequestContext(request, {
