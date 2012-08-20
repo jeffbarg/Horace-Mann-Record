@@ -33,7 +33,7 @@ class AuthorAdmin(admin.ModelAdmin):
 		)
 	search_fields = ['first_name', 'last_name', 'username']
 	
-	list_display = ('get_full_name', 'first_name', 'last_name', 'username')
+	list_display = ('get_full_name', 'first_name', 'last_name')
 
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Author, AuthorAdmin)
