@@ -59,6 +59,9 @@ a:visited {
 	color:inherit;
 }
 
+b {
+	font-weight: 900;
+}
 #header {
 	height:180px;
 	float: left;
