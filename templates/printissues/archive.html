@@ -2,22 +2,32 @@
 
 {% block head %}
         <link rel="stylesheet" href="{{STATIC_URL}}css/section_index.css" type="text/css" />
+
+        <style type="text/css" media=screen>
+        <!--
+            #content a:hover {
+                background-color: #ffffc8;
+            }
+        -->
+        </style>
 {% endblock head %}
 
 {% block content %}
     <div id = "sectionheader">Search</div>
         {% for issue in issues %}
-            <div class = "article" style="min-height:100px;">
-                <div class = "articlewrapper" style = "margin:auto;">
-                <div class = "articlecontent" style = "margin:auto;">
-                    <a href = "/archive/{{issue.volume}}/{{issue.issue}}"><div class = "articletitle">Volume {{issue.volume}}, Issue {{issue.issue}}</div></a>
-                    <div class = "articletext">
-                        {{issue.date_published|date:'l F j, o'}}
+
+            <a href = "/archive/{{issue.volume}}/{{issue.issue}}">
+                <div class = "article" style="min-height:100px;">
+                    <div class = "articlewrapper" style = "margin:auto;">
+                    <div class = "articlecontent" style = "margin:auto;">
+                        <div class = "articletitle">Volume {{issue.volume}}, Issue {{issue.issue}}</div>
+                        <div class = "articletext">
+                            {{issue.date_published|date:'l F j, o'}}
+                        </div>
+                    </div>
                     </div>
                 </div>
-                </div>
-
-            </div>
+            </a>
 
             {% empty %}
                 <p>No results found.</p>
