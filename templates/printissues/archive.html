@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+        <link rel="stylesheet" href="{{STATIC_URL}}css/section_index.css" type="text/css" />
+{% endblock head %}
+
+{% block content %}
+    <div id = "sectionheader">Search</div>
+        {% for issue in issues %}
+            <div class = "article">
+                <div class = "articlewrapper" style = "margin:auto;">
+                <div class = "articlecontent" style = "margin:auto;">
+                    <a href = "/archive/{{issue.volume}}/{{issue.issue}}"><div class = "articletitle">Volume {{issue.volume}}, Issue {{issue.issue}}</div></a>
+                    <div class = "articletext">
+                    </div>
+                </div>
+                </div>
+
+            </div>
+
+            {% empty %}
+                <p>No results found.</p>
+            {% endfor %}
+
+
+    
+{% endblock %}

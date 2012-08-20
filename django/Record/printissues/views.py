@@ -17,3 +17,25 @@ def latest(request):
 		})
 
 	return HttpResponse(t.render(c))
+
+def archive(request):
+	issues = PrintIssue.objects.order_by('-date_published')
+	
+	t = loader.get_template('printissues/archive.html')
+	c = RequestContext(request, {
+		'issues': issues,
+		})
+
+	return HttpResponse(t.render(c))
+
+def detail(request, volume, issue):
+	issue = get_object_or_404(PrintIssue, volume=volume, issue=issue)
+
+	# authors = article.authors.all
+	
+	t = loader.get_template('printissues/detail.html')
+	c = RequestContext(request, {
+		'issue': issue,
+		})
+
+	return HttpResponse(t.render(c))

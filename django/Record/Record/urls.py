@@ -12,8 +12,10 @@ urlpatterns = patterns('',
 	url(r'^articles/(?P<article_slug>[\w\-]+)/$', 'articles.views.detail'),
 	url(r'^sections/(?P<section>[\w\-]+)/$', 'articles.views.section'),
 
-	url(r'^printissues/latest/$', 'printissues.views.latest'),
-	
+	url(r'^archive/latest/$', 'printissues.views.latest'),
+	url(r'^archive/$', 'printissues.views.archive'),
+	url(r'^archive/(?P<volume>\d+)/(?P<issue>\d+)/$', 'printissues.views.detail'),
+
 	(r'^search/', include('haystack.urls')),
 )
 

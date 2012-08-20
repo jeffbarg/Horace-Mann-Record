@@ -59,7 +59,10 @@ class Article(models.Model):
 
 	def save(self):
 		if not self.id:
-			self.slug = slugify(self.title)
-			self.date_published = timezone.now()
+			if not self.slug:
+				self.slug = slugify(self.title)
+			if not self.date_published:
+				self.date_published = timezone.now()
+		
 		self.last_updated = timezone.now()
 		super(Article, self).save()
