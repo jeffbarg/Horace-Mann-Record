@@ -16,7 +16,7 @@ class PrintIssue(models.Model):
 	date_published	 = models.DateTimeField('Date Published', blank = True)
 	
 	def __unicode__(self):
-		return u"Volume %i, Issue %i" % (volume, issue,)
+		return u"Volume %i, Issue %i" % (self.volume, self.issue,)
 
 	def get_absolute_url(self):
 		return "/articles/%s/" % self.slug
