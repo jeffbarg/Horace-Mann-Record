@@ -31,7 +31,8 @@ class AuthorAdmin(admin.ModelAdmin):
 			{'fields' : ('bio', 'profile_picture'),
 			 'classes': ('collapse',),}),
 		)
-	search_fields = ['get_full_name',]
+	search_fields = ['first_name', 'last_name', 'username']
+	
 	list_display = ('get_full_name', 'first_name', 'last_name', 'username')
 
 admin.site.register(Article, ArticleAdmin)
