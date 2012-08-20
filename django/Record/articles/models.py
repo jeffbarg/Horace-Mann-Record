@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 import datetime
+from django.utils import timezone
 from django.template.defaultfilters import slugify
 
 # Create your models here.
@@ -59,6 +60,6 @@ class Article(models.Model):
 	def save(self):
 		if not self.id:
 			self.slug = slugify(self.title)
-			self.date_published = datetime.datetime.today()
-		self.last_updated = datetime.datetime.today()
+			self.date_published = timezone.now()
+		self.last_updated = timezone.now()
 		super(Article, self).save()

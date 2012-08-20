@@ -30,7 +30,7 @@
 		" id = "authorimage"/>
 		<p>Written by <b>{{ article.authors.all|join:', ' }}</b>
 
-			<br />on <strong>August 23rd, 2012</strong> at <strong>4:05 PM</strong></p>
+			<br />on <strong>{{article.date_published|date:'F j, o'}}</strong> at <strong>{{article.date_published|date:'g:i A'}}</strong></p>
 		
 		<hr />
 		<h2>More Articles By This Author</h2>

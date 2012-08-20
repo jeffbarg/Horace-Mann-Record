@@ -86,6 +86,7 @@ body {
 
 .date_published {
 	float:right;
+	text-align: right;
 	width: 35%;
 	clear:none;
 	position: relative;

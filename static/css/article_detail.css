@@ -14,7 +14,8 @@
 #article {
 	font-size: 12pt;
 	padding-bottom: 10px;
-	line-height: 18pt;	
+	line-height: 20pt;	
+	text-align: justify;
 }
 
 #article h1 {
@@ -59,6 +60,11 @@
 #articlecontent:first-letter {
 	font-size:x-large;
 	font-weight: 900;
+}
+
+#articlecontent p {
+	margin-top:1.5em;
+	margin-bottom:1.5em;
 }
 
 #sidebar {

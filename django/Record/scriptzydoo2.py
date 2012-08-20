@@ -1,5 +1,6 @@
 from django.core.management import setup_environ
 from Record import settings
+from django.utils.timezone import utc
 
 setup_environ(settings)
 
@@ -44,6 +45,12 @@ for obj in data:
 	if (obj['post_status'] != "publish"):
 		continue;
 
+	if (len(obj['post_content']) == 0) :
+		continue;
+
+	if (len(obj['post_title']) == 0) :
+		continue;
+
 	post_id = obj['ID']
 
 	if (post_id in post_dict):
@@ -53,10 +60,10 @@ for obj in data:
 		post_dict[post_id] = article
 	
 	article.title = obj['post_title']
-	article.date_published = dateutil.parser.parse(obj['post_modified'])
-	article.text = "%s%s%s" % ('<p>', obj['post_content'].replace('\n\n','\n').replace('\n', '</p><p>'), '</p>')
-
 	article.save()
+
+	article.date_published = dateutil.parser.parse(obj['post_modified'])
+	article.text = "%s%s%s" % ('<p>', obj['post_content'].replace('&nbsp;','').replace('&nbsp;\n','').replace('\n\n', '\n').replace('\n', '</p><p>'), '</p>')
 
 	article.authors.add(usr_dict[obj['post_author']])
 
