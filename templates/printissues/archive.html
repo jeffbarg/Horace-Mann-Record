@@ -7,7 +7,7 @@
 {% block content %}
     <div id = "sectionheader">Search</div>
         {% for issue in issues %}
-            <div class = "article">
+            <div class = "article" style="min-height:100px;">
                 <div class = "articlewrapper" style = "margin:auto;">
                 <div class = "articlecontent" style = "margin:auto;">
                     <a href = "/archive/{{issue.volume}}/{{issue.issue}}"><div class = "articletitle">Volume {{issue.volume}}, Issue {{issue.issue}}</div></a>
