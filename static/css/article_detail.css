@@ -51,6 +51,16 @@
 	float: left;
 }
 
+#featured_image:hover {
+	-webkit-animation: infinite-spinning linear 12.4s infinite;
+	-webkit-animation-direction: alternate;
+}
+
+#content {
+	-webkit-animation: infinite-spinning linear 12.4s infinite;
+
+}
+
 #articlecontent {
 	margin-top:26px;
 
