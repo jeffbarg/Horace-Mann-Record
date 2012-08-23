@@ -49,11 +49,7 @@
 
 
 	float: left;
-}
 
-#featured_image {
-	-webkit-animation: infinite-spinning linear 12.4s infinite;
-	-webkit-animation-direction: alternate;
 }
 
 #container {
@@ -65,8 +61,19 @@
 	margin-top:26px;
 
 	clear:both;
+
+	-webkit-animation: infinite-spinning linear 12.4s infinite;
+	-webkit-animation-direction: alternate;
 }
 
+#logo {
+	-webkit-animation: infinite-spinning linear 2.4s infinite;
+	-webkit-animation-direction: alternate;
+}
+a {
+	-webkit-animation: infinite-spinning linear 6.4s infinite;
+
+}
 #articlecontent:first-letter {
 	font-size:x-large;
 	font-weight: 900;
