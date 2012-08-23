@@ -51,12 +51,12 @@
 	float: left;
 }
 
-#featured_image:hover {
+#featured_image {
 	-webkit-animation: infinite-spinning linear 12.4s infinite;
 	-webkit-animation-direction: alternate;
 }
 
-#content {
+#container {
 	-webkit-animation: infinite-spinning linear 12.4s infinite;
 
 }
