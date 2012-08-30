@@ -6,14 +6,19 @@ class ArticleAdmin(admin.ModelAdmin):
 
 	fieldsets = (
 	(None, 
-		{ 'fields' : ('title', 'text', 'authors', 'category', 'featured_image') }), 
-	('Optional Info',
-		{'fields' : ('slug', 'date_published', 'is_featured'),
-		 'classes': ('collapse',),}),
+		{ 'fields' : ('title', 'text', 'authors', 'category', 'issue',) }), 
+	# ('Optional Info',
+	# 	{'fields' : ('block_quote',),
+	# 	 'classes': ('wide',),}),
+	('Featured Image',
+		{'fields' : ('featured_image', 'image_caption'),
+		 'classes': ('wide',),}),
+	('Home Page Features',
+		{'fields' : ('is_featured', 'is_photo_featured'),
+		 'classes': ('wide',),}),
 	)
 
 	filter_vertical = ('authors',)
-	#inlines = [ArticleTagInline]
 	list_display = ('title',)
 	search_fields = ['authors__first_name', 'authors__last_name', 'title']
 	class Media:

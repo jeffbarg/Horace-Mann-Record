@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from django.core.management import setup_environ
 from Record import settings
 from django.utils.timezone import utc
@@ -7,6 +9,7 @@ setup_environ(settings)
 import dateutil.parser
 
 from articles.models import Article, Author
+from issues.models import Issue
 
 import json
 
@@ -35,6 +38,10 @@ for obj in data:
 for k, v in usr_dict.items():
 	v.save()
 
+
+oldissue = Issue(volume = 109, issue = 1)
+oldissue.save()
+
 post_data=open('posteroo.json')
 
 data = json.load(post_data)
@@ -59,6 +66,8 @@ for obj in data:
 		article = Article()
 		post_dict[post_id] = article
 	
+	article.issue = oldissue
+
 	article.title = obj['post_title']
 	article.save()
 

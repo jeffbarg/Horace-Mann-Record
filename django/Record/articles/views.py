@@ -2,20 +2,32 @@
 from django.template import RequestContext, loader
 from articles.models import Article
 from articles.models import Author
+from issues.models import Issue
+
 from django.http import HttpResponse
 from django.shortcuts import render_to_response, get_object_or_404
 from django.http import Http404
+from django.utils import timezone
 
 
 def index(request):
-	articleobjects = Article.objects
+	current_issue = Issue.objects.filter(date_published__lte=timezone.now()).order_by('-volume', '-issue')[0]
+	articleobjects = current_issue.articles.filter(is_featured = True)
 
-	oped_articles = articleobjects.filter(category = "OE").order_by('-date_published')[:1]
-	arts_articles = articleobjects.filter(category = "AE").order_by('-date_published')[:1]
-	lionsden_articles = articleobjects.filter(category = "LD").order_by('-date_published')[:1]
-	middledivision_articles = articleobjects.filter(category = "MD").order_by('-date_published')[:1]
-	news_articles = articleobjects.filter(category = "NW").order_by('-date_published')[:2]
-	features_articles = articleobjects.filter(category = "FT").order_by('-date_published')[:2]
+	# oped_articles = articleobjects.filter(category = "OE").order_by('-date_published')[:1]
+	# arts_articles = articleobjects.filter(category = "AE").order_by('-date_published')[:1]
+	# lionsden_articles = articleobjects.filter(category = "LD").order_by('-date_published')[:1]
+	# middledivision_articles = articleobjects.filter(category = "MD").order_by('-date_published')[:1]
+	# news_articles = articleobjects.filter(category = "NW").order_by('-date_published')[:2]
+	# features_articles = articleobjects.filter(category = "FT").order_by('-date_published')[:2]
+
+	oped_articles = articleobjects.filter(category = "OE").order_by('-date_published')
+	arts_articles = articleobjects.filter(category = "AE").order_by('-date_published')
+	lionsden_articles = articleobjects.filter(category = "LD").order_by('-date_published')
+	middledivision_articles = articleobjects.filter(category = "MD").order_by('-date_published')
+	news_articles = articleobjects.filter(category = "NW").order_by('-date_published')
+	features_articles = articleobjects.filter(category = "FT").order_by('-date_published')
+
 
 	image_articles = articleobjects.exclude(featured_image = '').order_by('-date_published')[:5]
 

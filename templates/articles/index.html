@@ -11,6 +11,7 @@
 
 {% block content %}
 		<div id = "leftcolumn">
+			{% if oped_articles.count != 0 %}
 			<div class = "section">
 				<a href = "/sections/opeds/"><h1>Opinions &amp; Editorials</h1></a>
 				{% for article in oped_articles %}
@@ -27,7 +28,9 @@
 					</div>
 				{% endfor %}
 			</div>
+			{% endif %}
 			
+			{% if features_articles.count != 0 %}
 			<div class = "section">
 				<a href = "/sections/features/"><h1>Features</h1></a>
 				{% for article in features_articles %}
@@ -44,10 +47,12 @@
 					</div>
 				{% endfor %}
 			</div>
+			{% endif %}
 		</div>
 
 		<div id = "rightcolumn">
 
+			{% if news_articles.count != 0 %}
 			<div class = "section">
 				<a href = "/sections/news/"><h1>News</h1></a>
 				{% for article in news_articles %}
@@ -64,8 +69,9 @@
 					</div>
 				{% endfor %}
 			</div>
+			{% endif %}
 
-
+			{% if middledivision_articles.count != 0 %}
 			<div class = "section">
 				<a href = "/sections/middledivision/"><h1>Middle Division</h1></a>
 				{% for article in middledivision_articles %}
@@ -82,6 +88,7 @@
 					</div>
 				{% endfor %}
 			</div>
+			{% endif %}
 		</div>
 
 		<div id = "middlecolumn">
@@ -102,7 +109,7 @@
 		        </div>
 		    </div>
 
-
+			{% if lionsden_articles.count != 0 %}
 			<div class = "section">
 				<a href = "/sections/lionsden/"><h1>Lion&apos;s Den</h1></a>
 				{% for article in lionsden_articles %}
@@ -119,7 +126,9 @@
 					</div>
 				{% endfor %}
 			</div>
+			{% endif %}
 
+			{% if arts_articles.count != 0 %}
 			<div class = "section">
 				<a href = "/sections/arts/"><h1>Arts &amp; Entertainment</h1></a>
 				{% for article in arts_articles %}
@@ -136,6 +145,6 @@
 					</div>
 				{% endfor %}
 			</div>
-
+			{% endif %}
 		</div>
 {% endblock content %}

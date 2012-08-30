@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 import datetime
 from django.utils import timezone
 from django.template.defaultfilters import slugify
+from issues.models import Issue
 
 # Create your models here.
 class Author(User):
@@ -23,6 +24,8 @@ class Author(User):
 			self.username = uname
 		super(Author, self).save()
 
+
+
 class Article(models.Model):
 	CATEGORY_CHOICES = (
 		('OE', 'Opinions and Editorials'),
@@ -32,15 +35,18 @@ class Article(models.Model):
 		('MD', 'Middle Division'),
 		('NW', 'News'),
 	)
-	title 			 = models.CharField('Title', help_text = 'Must be under 140 characters.', max_length=140)
-	text 			 = models.TextField('Article Text', help_text = 'Copy and paste Article Text into here, then edit using built-in editor as needed.')
-	authors		 	 = models.ManyToManyField(Author, related_name='articles')
+	title 					 = models.CharField('Title', help_text = 'Must be under 140 characters.', max_length=140)
+	text 					 = models.TextField('Article Text', help_text = 'Copy and paste Article Text into here, then edit using built-in editor as needed.')
+	authors		 			 = models.ManyToManyField(Author, related_name='articles')
 
-	slug 			 = models.SlugField('Slug', max_length = 150, blank = True)
+	issue 					 = models.ForeignKey(Issue, related_name='articles')
 
-	category 	 	 = models.CharField('Category', max_length=20, choices = CATEGORY_CHOICES)
+	slug 					 = models.SlugField('Slug', max_length = 150, blank = True)
 
-	is_featured		 = models.BooleanField('Featured' , help_text = 'Is this article in a featured section?')
+	category 	 	 		 = models.CharField('Category', max_length=20, choices = CATEGORY_CHOICES)
+
+	is_featured		 		 = models.BooleanField('Featured (Front Page)' , help_text = 'Should this article be on the front page of the website for this issue?')
+	is_photo_featured		 = models.BooleanField('Photo Featured (Image Slider - Front Page)' , help_text = 'Should the featured image of this article be in the image slider on the front page for this article?')
 
 	#Date Fields (Technically optional in admin view.  Should always be set.)
 
@@ -50,6 +56,10 @@ class Article(models.Model):
 	#Optional Fields
 
 	featured_image   = models.ImageField(upload_to='featured/image', blank = True)
+	image_caption 	 = models.CharField('Image Caption', help_text = 'Must be under 200 characters.', max_length=200, blank=True)	
+
+	block_quote 	 = models.CharField('Block Quote', help_text = 'Must be under 100 characters.', max_length=100, blank=True)
+
 
 	def __unicode__(self):
 		return self.title
