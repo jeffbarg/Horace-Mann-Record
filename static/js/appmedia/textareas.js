@@ -21,8 +21,13 @@ tinyMCE.init({
 	mode : "textareas",
 	theme : "advanced",
 
-	oninit : "setPlainText",
-	plugins : "paste",
+plugins : "paste",
+paste_text_sticky : true,
+setup : function(ed) {
+    ed.onInit.add(function(ed) {
+      ed.pasteAsPlainText = true;
+    });
+  }
 
 	//content_css : "/appmedia/blog/style.css",
 	theme_advanced_toolbar_location : "top",
