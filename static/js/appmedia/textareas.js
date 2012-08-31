@@ -1,6 +1,29 @@
+function setPlainText() {
+    var ed = tinyMCE.get('elm1');
+
+    ed.pasteAsPlainText = true;  
+
+    //adding handlers crossbrowser
+    if (tinymce.isOpera || /Firefox\/2/.test(navigator.userAgent)) {
+        ed.onKeyDown.add(function (ed, e) {
+            if (((tinymce.isMac ? e.metaKey : e.ctrlKey) && e.keyCode == 86) || (e.shiftKey && e.keyCode == 45))
+                ed.pasteAsPlainText = true;
+        });
+    } else {            
+        ed.onPaste.addToTop(function (ed, e) {
+            ed.pasteAsPlainText = true;
+        });
+    }
+}
+
+
 tinyMCE.init({
 	mode : "textareas",
 	theme : "advanced",
+
+	oninit : "setPlainText",
+	plugins : "paste",
+
 	//content_css : "/appmedia/blog/style.css",
 	theme_advanced_toolbar_location : "top",
 	theme_advanced_toolbar_align : "left",
@@ -21,3 +44,4 @@ tinyMCE.init({
 		theme_advanced_buttons3 : "sub,sup,separator,image,insertdate,inserttime,separator,tablecontrols,separator,hr,advhr,visualaid,separator,charmap,emotions,iespell,flash,separator,print"
 	}
 });
+
