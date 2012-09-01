@@ -11,13 +11,14 @@ def latest(request):
 	issue = Issue.objects.exclude(printissue = '').order_by('-volume', '-issue')[:1].all()[0]
 
 	# authors = article.authors.all
-	
-	t = loader.get_template('printissues/detail.html')
-	c = RequestContext(request, {
-		'issue': issue,
-		})
 
-	return HttpResponse(t.render(c))
+	return detail(request, issue.volume, issue.issue)	
+	# t = loader.get_template('printissues/detail.html')
+	# c = RequestContext(request, {
+	# 	'issue': issue,
+	# 	})
+
+	# return HttpResponse(t.render(c))
 
 def archive(request):
 	issues = Issue.objects.exclude(printissue = '').order_by('-volume', '-issue')
@@ -34,7 +35,7 @@ def detail(request, volume, issue):
 
 	# authors = article.authors.all
 
-	return HttpResponseRedirect('http://horacemannrecord.com/media/{{issue.printissue}}')	
+	return HttpResponseRedirect(issue.printissue.url)	
 	# t = loader.get_template('printissues/detail.html')
 	# c = RequestContext(request, {
 	# 	'issue': issue,
