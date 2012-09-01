@@ -11,11 +11,13 @@
 {{category}}
 </div>
 
+{% load thumbnail %}
+
 {% for article in articles %}
 	<div class = "article">
 		<div class = "articleinfo">
-			<img src = "{% if article.authors.all.0.profile_picture %}
-				{{article.authors.all.0.profile_picture.url}}
+			<img src = "{% thumbnail article.authors.all.0.profile_picture "150x150" as thumb %}
+				{{thumb.url}}
 			{% else %}
 				{{STATIC_URL}}img/recordicon.png
 			{% endif %}

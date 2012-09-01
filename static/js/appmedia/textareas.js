@@ -4,9 +4,6 @@ tinyMCE.init({
 	mode : "textareas",
 	theme : "advanced",
 
-
-
-
 	//content_css : "/appmedia/blog/style.css",
 	theme_advanced_toolbar_location : "top",
 	theme_advanced_toolbar_align : "left",
