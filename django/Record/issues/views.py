@@ -34,7 +34,7 @@ def detail(request, volume, issue):
 
 	# authors = article.authors.all
 
-	return HttpResponseRedirect(issue.file.url)	
+	return HttpResponseRedirect('http://horacemannrecord.com/media/{{issue.printissue}}')	
 	# t = loader.get_template('printissues/detail.html')
 	# c = RequestContext(request, {
 	# 	'issue': issue,
