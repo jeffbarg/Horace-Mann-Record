@@ -33,10 +33,11 @@ def detail(request, volume, issue):
 	issue = get_object_or_404(Issue, volume=volume, issue=issue)
 
 	# authors = article.authors.all
-	
-	t = loader.get_template('printissues/detail.html')
-	c = RequestContext(request, {
-		'issue': issue,
-		})
 
-	return HttpResponse(t.render(c))
+	return HttpResponseRedirect(issue.file.url)	
+	# t = loader.get_template('printissues/detail.html')
+	# c = RequestContext(request, {
+	# 	'issue': issue,
+	# 	})
+
+	# return HttpResponse(t.render(c))
