@@ -18,9 +18,9 @@
 		<div class = "articleinfo">
 			<img src = "{% thumbnail article.authors.all.0.profile_picture "150x150" as thumb %}
 				{{thumb.url}}
-			{% else %}
+			{% empty %}
 				{{STATIC_URL}}img/recordicon.png
-			{% endif %}
+			{% endthumbnail %}
 			" />
 
 			<div class = "authors">
