@@ -122,6 +122,8 @@ INSTALLED_APPS = (
 	'django.contrib.admin',
 	'south',
 	'haystack',
+	'sorl.thumbnail',
+
 	# Uncomment the next line to enable admin documentation:
 	# 'django.contrib.admindocs',
 	'issues',
