@@ -99,7 +99,7 @@
 		        	{% for article in image_articles %}
 		        		<a href = "/articles/{{article.slug}}">
 		        		{% load thumbnail %}
-		        		{% thumbnail article.featured_image "420x420" crop="top" as im %}
+		        		{% thumbnail article.featured_image "420x420" as im %}
 
 		        		<img src="{{im}}" alt="{{article.title}}" />
 
