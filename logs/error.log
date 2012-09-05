@@ -51,3 +51,31 @@
 [Tue Aug 14 16:12:38 2012] [error]   RuntimeWarning)
 [Tue Aug 14 16:12:38 2012] [error] /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:814: RuntimeWarning: DateTimeField received a naive datetime (2012-08-14 16:12:38.870169) while time zone support is active.
 [Tue Aug 14 16:12:38 2012] [error]   RuntimeWarning)
+[Sat Sep 01 01:00:53 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/{{issue.printissue}}, referer: http://horacemannrecord.com/archive/
+[Sat Sep 01 01:00:54 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/{{issue.printissue}}, referer: http://horacemannrecord.com/archive/
+[Sat Sep 01 01:02:32 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/{{issue.printissue}}, referer: http://horacemannrecord.com/archive/
+[Sat Sep 01 02:19:50 2012] [error] [client 74.68.139.238] Attempt to serve directory: /var/www/horacemannrecord.com/media/printissues/
+[Sat Sep 01 02:19:52 2012] [error] [client 74.68.139.238] Attempt to serve directory: /var/www/horacemannrecord.com/media/printissues/
+[Sat Sep 01 02:19:58 2012] [error] [client 74.68.139.238] Attempt to serve directory: /var/www/horacemannrecord.com/media/
+[Sat Sep 01 02:26:19 2012] [error] [client 74.68.139.238] Attempt to serve directory: /var/www/horacemannrecord.com/static/
+[Sat Sep 01 02:26:27 2012] [error] [client 74.68.139.238] Attempt to serve directory: /var/www/horacemannrecord.com/media/
+[Sat Sep 01 02:26:29 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/as
+[Sat Sep 01 02:26:42 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue01_1.
+[Sat Sep 01 02:26:45 2012] [error] [client 74.68.139.238] Attempt to serve directory: /var/www/horacemannrecord.com/media/printissues/
+[Sat Sep 01 02:29:08 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue01_1.
+[Sat Sep 01 02:29:22 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue01_1.
+[Sat Sep 01 02:29:23 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue01_1.
+[Sat Sep 01 02:29:23 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue01_1.
+[Sat Sep 01 02:29:24 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue01_1.
+[Sat Sep 01 02:29:25 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue01_1.
+[Sat Sep 01 02:30:07 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue01_1.
+[Sat Sep 01 02:32:02 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue01_1.
+[Sat Sep 01 02:32:46 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue01_1.
+[Sat Sep 01 02:32:47 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue01_1.
+[Sat Sep 01 02:33:17 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue01_1.
+[Sat Sep 01 02:33:18 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue01_1.
+[Sat Sep 01 02:33:19 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue01_1.
+[Sat Sep 01 02:34:09 2012] [error] [client 74.68.139.238] Attempt to serve directory: /var/www/horacemannrecord.com/media/
+[Sat Sep 01 13:14:54 2012] [error] [client 74.68.139.238] Attempt to serve directory: /var/www/horacemannrecord.com/media/
+[Sat Sep 01 13:14:54 2012] [error] [client 74.68.139.238] File does not exist: /var/www/horacemannrecord.com/media/asdf
+[Sat Sep 01 13:35:00 2012] [error] [client 82.60.153.159] File does not exist: /var/www/horacemannrecord.com/media/featured/image/395888_1861534554332_493981969_n_2_1.jpeg, referer: http://www.google.it/imgres?imgurl=http://horacemannrecord.com/media/featured/image/395888_1861534554332_493981969_n_2_1.jpeg&imgrefurl=http://horacemannrecord.com/articles/mixed-swimming-relays-to-the-top/&usg=__-9PVgCx-D_UfDqAKuwRifBt40hU=&h=540&w=720&sz=61&hl=it&start=189&zoom=1&tbnid=FJKXnr02fvRBzM:&tbnh=146&tbnw=195&ei=v0ZCUI_nO4n04QSy74Eo&prev=/search%3Fq%3Dswimmers%26tbnh%3D127%26tbnw%3D169%26hl%3Dit%26sig%3D102151966895585440884%26biw%3D1280%26bih%3D539%26tbs%3Dsimg:CAESEgmFHBlntVlQbSFcAgBznlTjaw%26tbm%3Disch&itbs=1&iact=hc&vpx=801&vpy=227&dur=109&hovh=194&hovw=259&tx=206&ty=147&sig=102151966895585440884&page=14&ved=1t:429,r:8,s:190,i:727
