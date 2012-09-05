@@ -98,7 +98,13 @@
 		        <div id="slider">
 		        	{% for article in image_articles %}
 		        		<a href = "/articles/{{article.slug}}">
-		        		<img src="{{article.featured_image.url}}" alt="{{article.title}}" />
+		        		{% load thumbnail %}
+		        		{% thumbnail article.featured_image "420x420" as im %}
+
+		        		<img src="{{im}}" alt="{{article.title}}" />
+
+						{% endthumbnail %}
+
 			        	</a>
 		        	{% endfor %}
 
