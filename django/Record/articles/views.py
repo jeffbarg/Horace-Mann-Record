@@ -79,7 +79,7 @@ def section(request, section):
 		'NW': "News",
 	}
 
-	articles = Article.objects.filter(category = category).order_by('-date_published')[:10]
+	articles = Article.objects.filter(category = category).filter(issue__date_published__lte=timezone.now()).order_by('-date_published')[:10]
 
 	t = loader.get_template('articles/section_index.html')
 	c = RequestContext(request, {
