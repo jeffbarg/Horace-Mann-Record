@@ -70,8 +70,6 @@ body {
 	padding:10px 0;
 
 	font-family: 'Paletino', serif;
-
-	clear:both;
 }
 
 .articlemetadata {
@@ -100,4 +98,5 @@ body {
 .articlecontent {
 	font-weight: 100;
 	text-align: justify;
+	clear:both;
 }
