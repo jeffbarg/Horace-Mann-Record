@@ -9,7 +9,7 @@ from django.utils import timezone
 # Create your views here.
 
 def latest(request):
-	issue = Issue.objects.filter(date_published__lte=timezone.now()).exclude(printissue = '').order_by('-volume', '-issue')[:1].all()[0]
+	issue = Issue.objects.exclude(printissue = '').order_by('-volume', '-issue')[:1].all()[0]
 
 	# authors = article.authors.all
 

@@ -448,3 +448,12 @@
 [Mon Oct 01 17:37:38 2012] [error] [client 157.56.93.193] Attempt to serve directory: /var/www/horacemannrecord.com/media/printissues/
 [Wed Oct 03 06:46:43 2012] [error] [client 66.249.71.68] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue06.pdf
 [Wed Oct 03 09:31:51 2012] [error] [client 66.249.71.68] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue22_1.pdf
+[Sat Oct 06 20:03:58 2012] [error] [client 67.244.22.98] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue05.pdf
+[Sun Oct 07 07:25:26 2012] [error] [client 66.249.76.3] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue08.pdf
+[Sun Oct 07 16:38:52 2012] [error] [client 209.2.215.221] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue05.pdf
+[Mon Oct 08 11:35:30 2012] [error] [client 24.215.177.92] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue05.pdf
+[Mon Oct 08 11:43:37 2012] [error] [client 24.215.177.92] File does not exist: /var/www/horacemannrecord.com/media/printissues/Isf
+[Mon Oct 08 16:36:00 2012] [error] [client 66.249.76.3] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue05.pdf
+[Fri Oct 12 17:58:58 2012] [error] [client 24.90.236.19] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue05.pdf
+[Sat Oct 13 00:35:21 2012] [error] [client 66.249.76.3] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue06.pdf
+[Sat Oct 13 05:50:04 2012] [error] [client 66.249.76.3] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue09.pdf
