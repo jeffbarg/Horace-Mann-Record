@@ -466,3 +466,4 @@
 [Wed Nov 07 00:53:43 2012] [error] [client 157.55.35.91] Attempt to serve directory: /var/www/horacemannrecord.com/media/printissues/
 [Wed Nov 07 13:54:17 2012] [error] [client 66.249.75.3] File does not exist: /var/www/horacemannrecord.com/media/authors/pictures/424978_507201979293998_564587297_n.jpeg
 [Fri Nov 09 07:22:51 2012] [error] [client 68.175.48.99] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue09_Web.pdf
+[Fri Nov 09 14:54:20 2012] [error] [client 68.175.48.99] File does not exist: /var/www/horacemannrecord.com/media/printissues/Issue09_Web.pdf
